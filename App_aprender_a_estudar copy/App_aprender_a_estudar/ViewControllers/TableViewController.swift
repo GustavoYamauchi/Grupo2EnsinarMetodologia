@@ -9,12 +9,9 @@
 import Foundation
 import UIKit
 
-
-
 class TableViewController: UITableViewController {
     var dataSource: [String] = ["1", "2", "3"]
-
-
+    
     @IBOutlet var tabela: UITableView!
     
     @IBOutlet weak var nav: UINavigationItem!
@@ -24,6 +21,11 @@ class TableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        
+        
+//        btnAdd.target = self
+//        btnAdd.action = #selector(criarNovoCell)
+        
         super.viewDidLoad()
         rec_data()
     }
@@ -44,6 +46,7 @@ class TableViewController: UITableViewController {
     @objc func reloadTabela(){
         tabela.reloadData()
     }
+    
     
     func rec_data(){
         var j = 1
@@ -67,12 +70,14 @@ class TableViewController: UITableViewController {
          if(Int(arrayOfRead[0]) ?? -1 >= 0){
                 i = Int(arrayOfRead[0]) ?? 0
         }
+
          while (j <= i+1){
             let estudo: Estudo = Estudo(Nome: "", Descricao: "")
-                 estudo.restore(file: arrayOfRead[j])
+            estudo.restore(file: arrayOfRead[j])
              print(estudo.getNome())
              array.append(estudo)
             j += 1
         }
     }
 }
+

@@ -53,7 +53,6 @@
                                 <state key="normal" title="Confirmar"/>
                                 <connections>
                                     <action selector="Confirmar:" destination="IPN-yt-pZy" eventType="touchUpInside" id="3o9-SB-76I"/>
-                                    <segue destination="3Ef-As-wvW" kind="show" id="JqU-T8-UXl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFW-h0-IgV">
@@ -109,16 +108,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKL-AD-rdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63.768115942028992" y="81.696428571428569"/>
-        </scene>
-        <!--ConfirmarMenu-->
-        <scene sceneID="UmK-za-Pv5">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Menu" referencedIdentifier="ConfirmarMenu" id="3Ef-As-wvW" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5jx-U1-tGP"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SUP-kg-3r1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="889" y="66"/>
         </scene>
     </scenes>
 </document>

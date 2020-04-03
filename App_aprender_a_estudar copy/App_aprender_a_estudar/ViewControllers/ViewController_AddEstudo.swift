@@ -41,16 +41,19 @@ class ViewController_AddEstudo: UIViewController {
         print(i)
         print("\n" + array[0].getNome())
         
+        array[i].save() //salva um arquivo com as infos do objeto
+        array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo
+        
         label1.text = "Confirmado"
         label2.text = "Confirmado"
-        array[i].save()
-        array[i].save_filename(i: i)
+        
     }
     
     @IBAction func mostrar(_ sender: Any) {
-        label1.text = array[i].getNome()
-        label2.text = array[i].getDescricao()
-        
+        array[i].remove(i: i)
+        i -= 1
+//        label1.text = array[i].Nome
+//        label2.text = array[i].Descricao
     }
     
 }
