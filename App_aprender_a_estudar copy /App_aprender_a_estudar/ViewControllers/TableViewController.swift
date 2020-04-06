@@ -17,6 +17,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var nav: UINavigationItem!
     
     @IBAction func btnReload(_ sender: Any) {
+        rec_data()
         reloadTabela()
     }
     
@@ -28,6 +29,7 @@ class TableViewController: UITableViewController {
         
         super.viewDidLoad()
         rec_data()
+        self.tableView.rowHeight = 44;
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,9 +51,10 @@ class TableViewController: UITableViewController {
     
     
     func rec_data(){
+        array.removeAll()
+        
         var j = 1
-
-         let fileName = "Nomes dos Arquivos"
+        let fileName = "Nomes dos Arquivos"
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 
          let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")

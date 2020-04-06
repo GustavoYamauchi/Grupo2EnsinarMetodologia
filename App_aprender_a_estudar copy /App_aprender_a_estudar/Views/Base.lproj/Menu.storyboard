@@ -22,17 +22,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obw-C8-F3g">
-                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obw-C8-F3g">
+                                            <rect key="frame" x="30" y="11.5" width="304" height="21"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" staticText="YES" adjustable="YES" allowsDirectInteraction="YES"/>
+                                            </accessibility>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Obw-C8-F3g" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xDk-3g-li2" secondAttribute="trailing" constant="-80" id="ZMz-xl-5My"/>
+                                        <constraint firstItem="Obw-C8-F3g" firstAttribute="leading" secondItem="xDk-3g-li2" secondAttribute="leading" constant="30" id="bac-Jx-c3g"/>
+                                        <constraint firstItem="Obw-C8-F3g" firstAttribute="centerY" secondItem="xDk-3g-li2" secondAttribute="centerY" id="wbq-H4-xpx"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="Obw-C8-F3g" id="Uro-0I-vNd"/>
+                                    <segue destination="zGe-UN-KSG" kind="show" id="W22-XN-XOP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -42,10 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="xDx-ba-qqe">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="rCU-I5-Cik">
+                        <barButtonItem key="leftBarButtonItem" id="rCU-I5-Cik">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V08-4s-Qhw">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="btnReload:" destination="mz0-Px-1Lc" eventType="touchUpInside" id="8Of-lq-H5B"/>
@@ -87,15 +96,25 @@
             </objects>
             <point key="canvasLocation" x="-993" y="852"/>
         </scene>
+        <!--Explorar-->
+        <scene sceneID="yug-wH-D9X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Explorar" referencedIdentifier="Explorar" id="zGe-UN-KSG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xEJ-Kr-l7I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2b3-rv-jlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="870"/>
+        </scene>
         <!--AddEstudo-->
         <scene sceneID="f98-uZ-Wqd">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="AddEstudo" storyboardName="AddEstudo" referencedIdentifier="AddEstudo" id="Kc0-QN-gJA" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qwZ-zM-4hK"/>
+                    <navigationItem key="navigationItem" title="Explorar" id="qwZ-zM-4hK"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKX-Ol-79y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="852"/>
+            <point key="canvasLocation" x="811" y="836"/>
         </scene>
     </scenes>
 </document>

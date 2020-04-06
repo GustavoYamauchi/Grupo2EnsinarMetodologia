@@ -155,8 +155,10 @@ public class Estudo{
             
             var writeString = String(i-1) + "\n"
             
-            while(j < i){
-                writeString = writeString + arrayOfRead[j]+"\n"
+            while(j <= i+1){
+                if(arrayOfRead[j] != self.Nome){
+                    writeString = writeString + arrayOfRead[j]+"\n"
+                }
                 j += 1
             }
             

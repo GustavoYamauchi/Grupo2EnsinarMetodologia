@@ -50,7 +50,7 @@ class ViewController_AddEstudo: UIViewController {
     }
     
     @IBAction func mostrar(_ sender: Any) {
-        array[i].remove(i: i)
+        array[0].remove(i: i)
         i -= 1
 //        label1.text = array[i].Nome
 //        label2.text = array[i].Descricao
