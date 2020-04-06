@@ -12,6 +12,7 @@ public class Estudo{
     public var Nome: String?
     public var Descricao: String?
     
+    
     init(Nome: String, Descricao: String) {
         self.Nome = Nome
         self.Descricao = Descricao        
@@ -155,8 +156,10 @@ public class Estudo{
             
             var writeString = String(i-1) + "\n"
             
-            while(j < i){
-                writeString = writeString + arrayOfRead[j]+"\n"
+            while(j <= i+1){
+                if(arrayOfRead[j] != self.Nome){
+                        writeString = writeString + arrayOfRead[j]+"\n"
+                }
                 j += 1
             }
             
@@ -165,8 +168,5 @@ public class Estudo{
             } catch let error as NSError {
                 print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
             }
-        
-        self.Nome = ""
-        self.Descricao = ""
     }
 }

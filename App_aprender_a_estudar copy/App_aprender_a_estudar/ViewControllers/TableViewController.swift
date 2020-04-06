@@ -35,20 +35,31 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let newCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
         
         newCell.label?.text = array[indexPath.row].Nome
+        newCell.btnExcluir.tag = indexPath.row
+        newCell.btnExcluir?.addTarget(self, action: #selector(excluirEstudo), for: .touchUpInside)
         
+        newCell.index = indexPath.row
         
         return newCell
     }
     
     @objc func reloadTabela(){
+        rec_data()
         tabela.reloadData()
     }
     
+    @objc func excluirEstudo(sender: UIButton){
+        print(sender.tag)
+        
+        array[Int(sender.tag)].remove(i: i)
+    }
     
     func rec_data(){
+        array.removeAll()
         var j = 1
 
          let fileName = "Nomes dos Arquivos"
