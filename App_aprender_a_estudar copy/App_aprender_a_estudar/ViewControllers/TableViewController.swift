@@ -9,12 +9,9 @@
 import Foundation
 import UIKit
 
-
-
 class TableViewController: UITableViewController {
     var dataSource: [String] = ["1", "2", "3"]
-
-
+    
     @IBOutlet var tabela: UITableView!
     
     @IBOutlet weak var nav: UINavigationItem!
@@ -24,6 +21,11 @@ class TableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        
+        
+//        btnAdd.target = self
+//        btnAdd.action = #selector(criarNovoCell)
+        
         super.viewDidLoad()
         rec_data()
     }
@@ -33,19 +35,31 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let newCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
         
         newCell.label?.text = array[indexPath.row].Nome
+        newCell.btnExcluir.tag = indexPath.row
+        newCell.btnExcluir?.addTarget(self, action: #selector(excluirEstudo), for: .touchUpInside)
         
+        newCell.index = indexPath.row
         
         return newCell
     }
     
     @objc func reloadTabela(){
+        rec_data()
         tabela.reloadData()
     }
     
+    @objc func excluirEstudo(sender: UIButton){
+        print(sender.tag)
+        
+        array[Int(sender.tag)].remove(i: i)
+    }
+    
     func rec_data(){
+        array.removeAll()
         var j = 1
 
          let fileName = "Nomes dos Arquivos"
@@ -67,12 +81,14 @@ class TableViewController: UITableViewController {
          if(Int(arrayOfRead[0]) ?? -1 >= 0){
                 i = Int(arrayOfRead[0]) ?? 0
         }
+
          while (j <= i+1){
             let estudo: Estudo = Estudo(Nome: "", Descricao: "")
-                 estudo.restore(file: arrayOfRead[j])
+            estudo.restore(file: arrayOfRead[j])
              print(estudo.getNome())
              array.append(estudo)
             j += 1
         }
     }
 }
+

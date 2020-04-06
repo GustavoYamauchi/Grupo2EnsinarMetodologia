@@ -3,50 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View ControllerS2-->
-        <scene sceneID="ZcL-L2-uFQ">
-            <objects>
-                <viewController storyboardIdentifier="Menu2" modalPresentationStyle="fullScreen" id="aBd-bY-84U" customClass="ViewController_S2" customModule="App_aprender_a_estudar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ITz-nG-a56">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="v3j-2X-jXS">
-                                <rect key="frame" x="59" y="434" width="296" height="334"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="safeArea" id="sVf-Rm-m07"/>
-                            </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ek1-zM-rmZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Segunda tela" leftItemsSupplementBackButton="YES" id="XjT-lN-tbA">
-                                        <barButtonItem key="backBarButtonItem" title="Home" id="Jzf-Xd-Hgx"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0k-AT-Nk8">
-                                <rect key="frame" x="325" y="776" width="45" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <segue destination="Kc0-QN-gJA" kind="show" id="aQK-Q6-rgh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="PuL-i5-YBw"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cq0-Jp-gmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="98.4375"/>
-        </scene>
         <!--Root View Controller-->
         <scene sceneID="3he-Tx-3We">
             <objects>
@@ -70,9 +29,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-gY-9p3">
+                                            <rect key="frame" x="356" y="6" width="45" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="excluir"/>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="btnExcluir" destination="8QU-gY-9p3" id="gH7-c1-uy2"/>
                                     <outlet property="label" destination="Obw-C8-F3g" id="Uro-0I-vNd"/>
                                 </connections>
                             </tableViewCell>
@@ -115,7 +80,7 @@
         <!--Navigation Controller-->
         <scene sceneID="wTa-by-Qai">
             <objects>
-                <navigationController storyboardIdentifier="ConfirmarMenu" modalPresentationStyle="fullScreen" id="lWy-qW-hai" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="lWy-qW-hai" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C7e-sX-apk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -136,10 +101,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKX-Ol-79y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="98"/>
+            <point key="canvasLocation" x="992" y="852"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="qCS-x0-B5k"/>
-    </inferredMetricsTieBreakers>
 </document>
