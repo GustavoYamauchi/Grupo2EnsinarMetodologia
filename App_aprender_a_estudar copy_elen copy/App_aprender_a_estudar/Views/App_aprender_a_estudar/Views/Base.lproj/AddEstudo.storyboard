@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPN-yt-pZy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Add Estudo-->
+        <scene sceneID="3dm-eg-Jgg">
+            <objects>
+                <viewController storyboardIdentifier="AddEstudo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IPN-yt-pZy" customClass="ViewController_AddEstudo" customModule="App_aprender_a_estudar" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vSb-eo-QOS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Estudo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P24-bw-xfV">
+                                <rect key="frame" x="28.5" y="157.5" width="155" height="22.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abM-eT-rNu">
+                                <rect key="frame" x="192" y="152" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="GNb-zw-1x3"/>
+                                    <constraint firstAttribute="width" constant="200" id="ZvI-MI-ri3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-xn-0kL">
+                                <rect key="frame" x="20" y="299" width="98" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLh-Zv-6e4">
+                                <rect key="frame" x="20" y="333" width="374" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="alc-JF-gNS"/>
+                                    <constraint firstAttribute="height" constant="130" id="uWN-ic-SHz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrl-q8-ZRK">
+                                <rect key="frame" x="153" y="627" width="108" height="42"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Confirmar"/>
+                                <connections>
+                                    <action selector="Confirmar:" destination="IPN-yt-pZy" eventType="touchUpInside" id="3o9-SB-76I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFW-h0-IgV">
+                                <rect key="frame" x="186" y="232" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxx-qZ-vhy">
+                                <rect key="frame" x="186" y="523" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcw-z0-X7u">
+                                <rect key="frame" x="80" y="730.5" width="254" height="35"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Mostrar as variaveis da classe"/>
+                                <connections>
+                                    <action selector="mostrar:" destination="IPN-yt-pZy" eventType="touchUpInside" id="Ykz-zM-heR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P24-bw-xfV" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" constant="-101" id="38K-ri-4fT"/>
+                            <constraint firstItem="LLh-Zv-6e4" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" id="4Wh-zz-fYn"/>
+                            <constraint firstItem="zFW-h0-IgV" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="-205.5" id="6y0-Ua-eJY"/>
+                            <constraint firstItem="abM-eT-rNu" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="-279" id="8Go-3f-jzq"/>
+                            <constraint firstItem="Mxx-qZ-vhy" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" id="GCb-1O-yyQ"/>
+                            <constraint firstItem="Mxx-qZ-vhy" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="85.5" id="Gh1-HE-To4"/>
+                            <constraint firstItem="Zrl-q8-ZRK" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="200" id="JC5-ec-L2o"/>
+                            <constraint firstItem="LLh-Zv-6e4" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="-50" id="Lhh-Jn-4pi"/>
+                            <constraint firstItem="P24-bw-xfV" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="-279.5" id="MV2-cu-0KZ"/>
+                            <constraint firstItem="ANh-xn-0kL" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="-137" id="Owj-Co-wuo"/>
+                            <constraint firstItem="Mcw-z0-X7u" firstAttribute="centerY" secondItem="vSb-eo-QOS" secondAttribute="centerY" constant="300" id="S5o-i4-uBp"/>
+                            <constraint firstItem="Zrl-q8-ZRK" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" id="USg-s8-0ae"/>
+                            <constraint firstItem="Mcw-z0-X7u" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" id="hjV-20-VPZ"/>
+                            <constraint firstItem="zFW-h0-IgV" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" id="nUb-Lp-u4G"/>
+                            <constraint firstItem="ANh-xn-0kL" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" constant="-138" id="t6D-RC-xzk"/>
+                            <constraint firstItem="abM-eT-rNu" firstAttribute="centerX" secondItem="vSb-eo-QOS" secondAttribute="centerX" constant="85" id="vP5-jb-FJl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lgi-67-pct"/>
+                    </view>
+                    <connections>
+                        <outlet property="Descricao" destination="LLh-Zv-6e4" id="ogY-zR-Lb3"/>
+                        <outlet property="Nome" destination="abM-eT-rNu" id="dzg-wH-HZE"/>
+                        <outlet property="label1" destination="zFW-h0-IgV" id="RRz-jo-LoZ"/>
+                        <outlet property="label2" destination="Mxx-qZ-vhy" id="NVz-OM-FDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKL-AD-rdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+</document>
