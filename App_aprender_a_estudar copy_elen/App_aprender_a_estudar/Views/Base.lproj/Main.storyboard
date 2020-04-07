@@ -34,7 +34,7 @@
                                 <state key="normal" title="Vamos!"/>
                                 <connections>
                                     <action selector="vamos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lP2-OV-rSa"/>
-                                    <segue destination="152-25-Z1t" kind="show" id="ccd-Cm-e5z"/>
+                                    <segue destination="152-25-Z1t" kind="show" id="xyp-ef-zbi"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9F-p4-2hF">

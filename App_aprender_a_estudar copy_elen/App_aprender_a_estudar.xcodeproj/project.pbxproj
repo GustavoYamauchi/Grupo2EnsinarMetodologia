@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2181CD243C372C002AE0C8 /* Grafico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181CC243C372C002AE0C8 /* Grafico.storyboard */; };
+		6E2181CF243C373A002AE0C8 /* Historico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181CE243C373A002AE0C8 /* Historico.storyboard */; };
+		6E2181D3243C376C002AE0C8 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181D2243C376C002AE0C8 /* Etapas.storyboard */; };
+		6E2181D5243C3782002AE0C8 /* Ajuda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */; };
+		6E62C718243D054A00562D9E /* CampoTexto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E62C717243D054A00562D9E /* CampoTexto.storyboard */; };
 		8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70273224366FBA00ABAEE2 /* TableViewController.swift */; };
 		8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7027342436720D00ABAEE2 /* CustomCell.swift */; };
 		BDA860B6243263ED00EC3267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860B5243263ED00EC3267 /* AppDelegate.swift */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E2181CC243C372C002AE0C8 /* Grafico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Grafico.storyboard; sourceTree = "<group>"; };
+		6E2181CE243C373A002AE0C8 /* Historico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Historico.storyboard; sourceTree = "<group>"; };
+		6E2181D2243C376C002AE0C8 /* Etapas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
+		6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ajuda.storyboard; sourceTree = "<group>"; };
+		6E62C717243D054A00562D9E /* CampoTexto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CampoTexto.storyboard; sourceTree = "<group>"; };
 		8B70273224366FBA00ABAEE2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B7027342436720D00ABAEE2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		BDA860B2243263ED00EC3267 /* App_aprender_a_estudar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_aprender_a_estudar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +174,11 @@
 				BDA860BB243263ED00EC3267 /* Main.storyboard */,
 				BDA860F8243271EB00EC3267 /* Menu.storyboard */,
 				BDA860FD2432B66400EC3267 /* AddEstudo.storyboard */,
+				6E2181CC243C372C002AE0C8 /* Grafico.storyboard */,
+				6E2181CE243C373A002AE0C8 /* Historico.storyboard */,
+				6E2181D2243C376C002AE0C8 /* Etapas.storyboard */,
+				6E62C717243D054A00562D9E /* CampoTexto.storyboard */,
+				6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,12 +287,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E62C718243D054A00562D9E /* CampoTexto.storyboard in Resources */,
 				BDA860C2243263EE00EC3267 /* LaunchScreen.storyboard in Resources */,
 				BDA860BF243263EE00EC3267 /* Assets.xcassets in Resources */,
+				6E2181CD243C372C002AE0C8 /* Grafico.storyboard in Resources */,
 				BDA860FF2432B66400EC3267 /* AddEstudo.storyboard in Resources */,
+				6E2181D5243C3782002AE0C8 /* Ajuda.storyboard in Resources */,
 				BDA860BD243263ED00EC3267 /* Main.storyboard in Resources */,
+				6E2181D3243C376C002AE0C8 /* Etapas.storyboard in Resources */,
 				BDA860FA243271EB00EC3267 /* Menu.storyboard in Resources */,
 				BDA860F524326AF600EC3267 /* Storyboard.storyboard in Resources */,
+				6E2181CF243C373A002AE0C8 /* Historico.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
