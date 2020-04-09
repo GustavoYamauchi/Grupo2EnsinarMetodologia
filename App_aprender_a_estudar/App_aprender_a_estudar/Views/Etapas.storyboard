@@ -7,40 +7,154 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller Etapas Explorar-->
         <scene sceneID="8zE-6D-a5L">
             <objects>
-                <viewController id="1bg-xy-BVH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Etapas" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bg-xy-BVH" customClass="ViewController_Etapas_Explorar" customModule="App_aprender_a_estudar" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3mE-U1-OaM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-54-5Bv">
-                                <rect key="frame" x="145" y="418" width="124" height="60"/>
-                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2j-E0-GtS">
+                                <rect key="frame" x="170" y="52.5" width="74.5" height="23.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Explorar">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yi-MT-URA">
+                                <rect key="frame" x="342" y="40.5" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="aLq-Mi-Cc8"/>
+                                    <constraint firstAttribute="height" constant="47" id="htJ-te-eZ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="10" height="10"/>
+                                <state key="normal" title="Info" image="info.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-4V-Ygc">
+                                <rect key="frame" x="34" y="41" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="SNd-7C-1j5"/>
+                                    <constraint firstAttribute="height" constant="47" id="dYf-kS-nb3"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="0.0" height="8"/>
+                                <state key="normal" title="Volta" image="arrow.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="redraw" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="COG-Z4-g6g">
+                                <rect key="frame" x="34" y="232" width="127.5" height="211"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB8-dk-IMD">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBn-RV-Hkc">
+                                        <rect key="frame" x="0.0" y="60.5" width="127.5" height="29.5"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Observar">
+                                                <attributes>
+                                                    <font key="NSFont" size="25" name="SFProDisplay-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCx-X5-j8M">
+                                        <rect key="frame" x="0.0" y="121" width="127.5" height="29.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Pesquisar">
+                                                <attributes>
+                                                    <font key="NSFont" size="25" name="SFProDisplay-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzm-iU-cx2">
+                                        <rect key="frame" x="0.0" y="181.5" width="127.5" height="29.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Descobrir">
+                                                <attributes>
+                                                    <font key="NSFont" size="25" name="SFProDisplay-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="jKV-gb-d7a">
+                                <rect key="frame" x="340" y="232" width="49" height="211"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-Tf-8zi">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-DN-mEZ">
+                                        <rect key="frame" x="0.0" y="60" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6et-Rw-qRS">
+                                        <rect key="frame" x="0.0" y="120" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d72-y6-wQq">
+                                        <rect key="frame" x="0.0" y="180" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsM-yX-nk2">
+                                <rect key="frame" x="66.5" y="507.5" width="281" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="XOt-h8-xoc"/>
+                                    <constraint firstAttribute="width" constant="281" id="hfs-XQ-Eoh"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Button">
+                                        <fragment content="Anotações/Perguntas">
                                             <attributes>
-                                                <color key="NSBackgroundColor" red="0.97518448844855055" green="1" blue="0.39501111274036493" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="41" name="SFCompactRounded-Semibold"/>
-                                                <font key="NSOriginalFont" size="41" name="SFCompactRounded-Semibold"/>
+                                                <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
-                                <connections>
-                                    <segue destination="GGd-fU-tvV" kind="show" id="215-Op-ugi"/>
-                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.68627450980000004" green="0.93648217430000003" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Zr-54-5Bv" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" id="O1P-QK-y4b"/>
-                            <constraint firstItem="6Zr-54-5Bv" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" id="sVg-kQ-g2n"/>
+                            <constraint firstItem="1Yi-MT-URA" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="-384" id="36c-B4-EWY"/>
+                            <constraint firstItem="jKV-gb-d7a" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" constant="157.5" id="5D9-g5-5vN"/>
+                            <constraint firstItem="n2j-E0-GtS" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="-384" id="NtI-xb-B9I"/>
+                            <constraint firstItem="COG-Z4-g6g" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" constant="-109.25" id="OVK-jM-VpD"/>
+                            <constraint firstItem="COG-Z4-g6g" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="-110.5" id="Oz0-SP-gcD"/>
+                            <constraint firstItem="tcJ-4V-Ygc" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="-383.5" id="SIG-n4-N7G"/>
+                            <constraint firstItem="jKV-gb-d7a" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="-110.5" id="ShS-sk-3sl"/>
+                            <constraint firstItem="n2j-E0-GtS" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" id="Z0s-Sh-p2D"/>
+                            <constraint firstItem="lsM-yX-nk2" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" id="b2B-WW-sbN"/>
+                            <constraint firstItem="1Yi-MT-URA" firstAttribute="trailing" secondItem="3mE-U1-OaM" secondAttribute="centerX" constant="182" id="jAt-zT-aVj"/>
+                            <constraint firstItem="tcJ-4V-Ygc" firstAttribute="leading" secondItem="3mE-U1-OaM" secondAttribute="centerX" constant="-173" id="lKI-uV-qfE"/>
+                            <constraint firstItem="lsM-yX-nk2" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="83" id="poJ-1o-Rfc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WZa-W2-7Dk"/>
                     </view>
@@ -220,4 +334,8 @@
             <point key="canvasLocation" x="2639" y="-104"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
