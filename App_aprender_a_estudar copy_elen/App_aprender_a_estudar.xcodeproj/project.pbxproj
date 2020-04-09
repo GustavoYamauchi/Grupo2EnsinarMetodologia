@@ -14,6 +14,7 @@
 		6E62C718243D054A00562D9E /* CampoTexto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E62C717243D054A00562D9E /* CampoTexto.storyboard */; };
 		8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70273224366FBA00ABAEE2 /* TableViewController.swift */; };
 		8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7027342436720D00ABAEE2 /* CustomCell.swift */; };
+		8BCFB13A243E6B3000AEE223 /* ViewController_AddEstudo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */; };
 		BDA860B6243263ED00EC3267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860B5243263ED00EC3267 /* AppDelegate.swift */; };
 		BDA860B8243263ED00EC3267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860B7243263ED00EC3267 /* SceneDelegate.swift */; };
 		BDA860BA243263ED00EC3267 /* ViewController_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860B9243263ED00EC3267 /* ViewController_main.swift */; };
@@ -55,6 +56,7 @@
 		6E62C717243D054A00562D9E /* CampoTexto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CampoTexto.storyboard; sourceTree = "<group>"; };
 		8B70273224366FBA00ABAEE2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B7027342436720D00ABAEE2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_AddEstudo2.swift; sourceTree = "<group>"; };
 		BDA860B2243263ED00EC3267 /* App_aprender_a_estudar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_aprender_a_estudar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA860B5243263ED00EC3267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDA860B7243263ED00EC3267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				BDA860FB2432B62100EC3267 /* ViewController_AddEstudo.swift */,
 				8B70273224366FBA00ABAEE2 /* TableViewController.swift */,
 				8B7027342436720D00ABAEE2 /* CustomCell.swift */,
+				8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */,
 				8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */,
 				BDA86101243385B200EC3267 /* Estudo.swift in Sources */,
+				8BCFB13A243E6B3000AEE223 /* ViewController_AddEstudo2.swift in Sources */,
 				BDA860FC2432B62100EC3267 /* ViewController_AddEstudo.swift in Sources */,
 				BDA860B8243263ED00EC3267 /* SceneDelegate.swift in Sources */,
 			);

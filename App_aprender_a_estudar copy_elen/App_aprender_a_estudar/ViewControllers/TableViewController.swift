@@ -21,11 +21,6 @@ class TableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        
-        
-//        btnAdd.target = self
-//        btnAdd.action = #selector(criarNovoCell)
-        
         super.viewDidLoad()
         rec_data()
     }
@@ -62,7 +57,7 @@ class TableViewController: UITableViewController {
         array.removeAll()
         var j = 1
 
-         let fileName = "Nomes dos Arquivos"
+        let fileName = "Nomes dos Arquivos"
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 
          let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
