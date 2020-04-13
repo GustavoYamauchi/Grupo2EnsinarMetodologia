@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController_Etapas_Explorar: UIViewController {
 
+
+class ViewController_Etapas_Explorar: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
