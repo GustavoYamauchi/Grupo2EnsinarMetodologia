@@ -1,34 +1,65 @@
 //
-//  TableViewController.swift
+//  ViewControllerHome.swift
 //  App_aprender_a_estudar
 //
-//  Created by Gustavo Yamauchi on 02/04/20.
+//  Created by Gustavo Yamauchi on 09/04/20.
 //  Copyright © 2020 Rodrigo Ryo Aoki. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class TableViewController: UITableViewController {
+protocol EstudoDelegate: class {
+    func salvar(estudo: Estudo)
+}
+
+extension ViewControllerHome: EstudoDelegate{
     
-    @IBOutlet var tabela: UITableView!
-    
-    @IBOutlet weak var nav: UINavigationItem!
-    
-    @IBAction func btnReload(_ sender: Any) {
-        reloadTabela()
+    func salvar(estudo: Estudo) {
+        array.append(estudo)
+        i += 1
+        print(i)
+        print("\n" + array[0].getNome())
+        
+        array[i].save() //salva um arquivo com as infos do objeto
+        array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo
+        
+        //label1.text = "Confirmado"
+        //label2.text = "Confirmado"
+        
+        tableView.reloadData()
     }
+}
+
+var i: Int = -1
+
+var array = [Estudo]()
+
+class ViewControllerHome: UIViewController, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
         rec_data()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.destination)
+            if let criarEstudo = segue.destination as? ViewController_AddEstudo2 {
+                print("passei")
+                criarEstudo.estudoDelegate = self
+            }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         array.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let newCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
         
@@ -39,11 +70,6 @@ class TableViewController: UITableViewController {
         newCell.index = indexPath.row
         
         return newCell
-    }
-    
-    func reloadTabela(){
-        rec_data()
-        tabela.reloadData()
     }
     
     @objc func excluirEstudo(sender: UIButton){
@@ -84,5 +110,6 @@ class TableViewController: UITableViewController {
             j += 1
         }
     }
+    
 }
 

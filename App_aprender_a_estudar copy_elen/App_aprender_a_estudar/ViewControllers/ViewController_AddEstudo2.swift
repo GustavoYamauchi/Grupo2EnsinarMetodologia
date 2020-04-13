@@ -10,10 +10,6 @@ import UIKit
 
 class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
     
-    
-    @IBAction func back(_ sender: UIBarButtonItem) {
-        
-    }
     @IBOutlet weak var nav: UINavigationItem!
     
     @IBOutlet weak var fieldTitulo: UITextView!
@@ -22,6 +18,9 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var fieldDescricao: UITextView!
     
+    
+   weak var estudoDelegate: EstudoDelegate?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +41,8 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
         let descricao: String? = fieldDescricao.text
         
         let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!)
-        array.append(estudo)
         
-        i += 1
-        print(i)
-        print("\n" + array[0].getNome())
-        
-        array[i].save() //salva um arquivo com as infos do objeto
-        array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo
-        
-        //label1.text = "Confirmado"
-        //label2.text = "Confirmado"
-        
+        estudoDelegate?.salvar(estudo: estudo)
     }
     
 }
