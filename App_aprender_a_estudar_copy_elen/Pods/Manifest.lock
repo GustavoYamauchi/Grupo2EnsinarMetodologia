@@ -1,0 +1,16 @@
+PODS:
+  - SunburstDiagram (1.1.0)
+
+DEPENDENCIES:
+  - SunburstDiagram (~> 1.1.0)
+
+SPEC REPOS:
+  trunk:
+    - SunburstDiagram
+
+SPEC CHECKSUMS:
+  SunburstDiagram: 156620d9fe81d87156291ae4e3d9391a67b9d0e4
+
+PODFILE CHECKSUM: 76043730766d478934a5097b3a11484276f0c47a
+
+COCOAPODS: 1.9.1
