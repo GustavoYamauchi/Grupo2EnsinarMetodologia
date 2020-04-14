@@ -12,8 +12,10 @@
 		6E2181D3243C376C002AE0C8 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181D2243C376C002AE0C8 /* Etapas.storyboard */; };
 		6E2181D5243C3782002AE0C8 /* Ajuda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */; };
 		6E62C718243D054A00562D9E /* CampoTexto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E62C717243D054A00562D9E /* CampoTexto.storyboard */; };
+		8B5835F9243FB5400083B681 /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5835F8243FB5400083B681 /* ViewControllerHome.swift */; };
 		8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70273224366FBA00ABAEE2 /* TableViewController.swift */; };
 		8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7027342436720D00ABAEE2 /* CustomCell.swift */; };
+		8BCFB13A243E6B3000AEE223 /* ViewController_AddEstudo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */; };
 		BDA860B6243263ED00EC3267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860B5243263ED00EC3267 /* AppDelegate.swift */; };
 		BDA860B8243263ED00EC3267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860B7243263ED00EC3267 /* SceneDelegate.swift */; };
 		BDA860BA243263ED00EC3267 /* ViewController_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860B9243263ED00EC3267 /* ViewController_main.swift */; };
@@ -53,8 +55,10 @@
 		6E2181D2243C376C002AE0C8 /* Etapas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
 		6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ajuda.storyboard; sourceTree = "<group>"; };
 		6E62C717243D054A00562D9E /* CampoTexto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CampoTexto.storyboard; sourceTree = "<group>"; };
+		8B5835F8243FB5400083B681 /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
 		8B70273224366FBA00ABAEE2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B7027342436720D00ABAEE2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_AddEstudo2.swift; sourceTree = "<group>"; };
 		BDA860B2243263ED00EC3267 /* App_aprender_a_estudar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_aprender_a_estudar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA860B5243263ED00EC3267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDA860B7243263ED00EC3267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				BDA860FB2432B62100EC3267 /* ViewController_AddEstudo.swift */,
 				8B70273224366FBA00ABAEE2 /* TableViewController.swift */,
 				8B7027342436720D00ABAEE2 /* CustomCell.swift */,
+				8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */,
+				8B5835F8243FB5400083B681 /* ViewControllerHome.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -328,8 +334,10 @@
 				8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */,
 				8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */,
 				BDA86101243385B200EC3267 /* Estudo.swift in Sources */,
+				8BCFB13A243E6B3000AEE223 /* ViewController_AddEstudo2.swift in Sources */,
 				BDA860FC2432B62100EC3267 /* ViewController_AddEstudo.swift in Sources */,
 				BDA860B8243263ED00EC3267 /* SceneDelegate.swift in Sources */,
+				8B5835F9243FB5400083B681 /* ViewControllerHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
