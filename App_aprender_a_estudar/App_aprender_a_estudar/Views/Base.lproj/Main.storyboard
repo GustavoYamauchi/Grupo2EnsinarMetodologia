@@ -44,6 +44,14 @@
                                     <navigationItem title="Home" id="VSh-U2-QR8"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-eG-XrN">
+                                <rect key="frame" x="149" y="665" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Teste das etapas"/>
+                                <connections>
+                                    <segue destination="D69-OX-RMS" kind="show" id="2bu-LE-mRB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -89,6 +97,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Re-OG-eq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Etapas-->
+        <scene sceneID="8pJ-CD-ve5">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Explorar" storyboardName="Etapas" referencedIdentifier="Etapas" id="D69-OX-RMS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cBR-NA-Ezl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aas-SI-QNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="150"/>
         </scene>
     </scenes>
     <resources>
