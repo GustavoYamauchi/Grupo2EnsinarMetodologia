@@ -8,6 +8,13 @@
 
 import Foundation
 
+/*
+ elementos dentro do arquivo de um estudo
+ posição 1 = Nome
+ posição 2 = Descricao
+ posição 3 = Finalidade
+*/
+
 public class Estudo{
     public var Nome: String?
     public var Descricao: String?
