@@ -29,6 +29,10 @@
 		BDA860FF2432B66400EC3267 /* AddEstudo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA860FD2432B66400EC3267 /* AddEstudo.storyboard */; };
 		BDA86101243385B200EC3267 /* Estudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA86100243385B200EC3267 /* Estudo.swift */; };
 		BDE7B54C243FC191002CE578 /* ViewController_Etapas_Explorar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7B54B243FC191002CE578 /* ViewController_Etapas_Explorar.swift */; };
+		BDFE22272444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE22262444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift */; };
+		BDFE22292444F850005CC6AF /* ViewController_Etapas_Ler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE22282444F850005CC6AF /* ViewController_Etapas_Ler.swift */; };
+		BDFE222B2444F870005CC6AF /* ViewController_Etapas_Rememorar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE222A2444F870005CC6AF /* ViewController_Etapas_Rememorar.swift */; };
+		BDFE222D2444F880005CC6AF /* ViewController_Etapas_Repassar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE222C2444F880005CC6AF /* ViewController_Etapas_Repassar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		BDA860FE2432B66400EC3267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = App_aprender_a_estudar/Views/Base.lproj/AddEstudo.storyboard; sourceTree = "<group>"; };
 		BDA86100243385B200EC3267 /* Estudo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Estudo.swift; path = App_aprender_a_estudar/Estudo.swift; sourceTree = SOURCE_ROOT; };
 		BDE7B54B243FC191002CE578 /* ViewController_Etapas_Explorar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Explorar.swift; sourceTree = "<group>"; };
+		BDFE22262444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Perguntar.swift; sourceTree = "<group>"; };
+		BDFE22282444F850005CC6AF /* ViewController_Etapas_Ler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Ler.swift; sourceTree = "<group>"; };
+		BDFE222A2444F870005CC6AF /* ViewController_Etapas_Rememorar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Rememorar.swift; sourceTree = "<group>"; };
+		BDFE222C2444F880005CC6AF /* ViewController_Etapas_Repassar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Repassar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +174,7 @@
 				BDA860FB2432B62100EC3267 /* ViewController_AddEstudo.swift */,
 				8B70273224366FBA00ABAEE2 /* TableViewController.swift */,
 				8B7027342436720D00ABAEE2 /* CustomCell.swift */,
-				BDE7B54B243FC191002CE578 /* ViewController_Etapas_Explorar.swift */,
+				BDFE222E2444F8F7005CC6AF /* ViewController_Etapas */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +192,18 @@
 				6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BDFE222E2444F8F7005CC6AF /* ViewController_Etapas */ = {
+			isa = PBXGroup;
+			children = (
+				BDE7B54B243FC191002CE578 /* ViewController_Etapas_Explorar.swift */,
+				BDFE22262444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift */,
+				BDFE22282444F850005CC6AF /* ViewController_Etapas_Ler.swift */,
+				BDFE222A2444F870005CC6AF /* ViewController_Etapas_Rememorar.swift */,
+				BDFE222C2444F880005CC6AF /* ViewController_Etapas_Repassar.swift */,
+			);
+			path = ViewController_Etapas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA860BA243263ED00EC3267 /* ViewController_main.swift in Sources */,
+				BDFE22272444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift in Sources */,
 				BDA860E62432691000EC3267 /* ViewController_menu.swift in Sources */,
 				BDA860B6243263ED00EC3267 /* AppDelegate.swift in Sources */,
+				BDFE22292444F850005CC6AF /* ViewController_Etapas_Ler.swift in Sources */,
+				BDFE222B2444F870005CC6AF /* ViewController_Etapas_Rememorar.swift in Sources */,
 				8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */,
+				BDFE222D2444F880005CC6AF /* ViewController_Etapas_Repassar.swift in Sources */,
 				8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */,
 				BDE7B54C243FC191002CE578 /* ViewController_Etapas_Explorar.swift in Sources */,
 				BDA86101243385B200EC3267 /* Estudo.swift in Sources */,
