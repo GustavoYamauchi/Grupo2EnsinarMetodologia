@@ -53,6 +53,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource {
                 print("passei")
                 criarEstudo.estudoDelegate = self
             }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

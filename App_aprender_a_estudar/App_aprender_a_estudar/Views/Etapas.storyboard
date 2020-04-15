@@ -15,12 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2j-E0-GtS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2j-E0-GtS">
                                 <rect key="frame" x="157" y="72.5" width="100.5" height="31.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Explorar">
                                         <attributes>
                                             <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -42,10 +43,15 @@
                             <stackView opaque="NO" contentMode="redraw" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="COG-Z4-g6g">
                                 <rect key="frame" x="34" y="232" width="127.5" height="211"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB8-dk-IMD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB8-dk-IMD">
                                         <rect key="frame" x="0.0" y="0.0" width="127.5" height="29.5"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="25"/>
-                                        <nil key="textColor"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Finalidades">
+                                                <attributes>
+                                                    <font key="NSFont" size="25" name="SFProDisplay-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBn-RV-Hkc">
@@ -55,6 +61,7 @@
                                             <fragment content="Observar">
                                                 <attributes>
                                                     <font key="NSFont" size="25" name="SFProDisplay-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -90,15 +97,27 @@
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-Tf-8zi">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switch_finalidades:" destination="1bg-xy-BVH" eventType="valueChanged" id="EdM-Zh-gzQ"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-DN-mEZ">
                                         <rect key="frame" x="0.0" y="60" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switch_observar:" destination="1bg-xy-BVH" eventType="valueChanged" id="6BU-Uj-l9Z"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6et-Rw-qRS">
                                         <rect key="frame" x="0.0" y="120" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switch_pesquisar:" destination="1bg-xy-BVH" eventType="valueChanged" id="zc1-zR-BN1"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d72-y6-wQq">
                                         <rect key="frame" x="0.0" y="180" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switch_descobrir:" destination="1bg-xy-BVH" eventType="valueChanged" id="oxI-tk-pAa"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -186,6 +205,12 @@
                     <tabBarItem key="tabBarItem" title="Menu" id="Vv1-FO-SL4"/>
                     <navigationItem key="navigationItem" id="Zl0-Sb-cTD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="s_descobrir" destination="d72-y6-wQq" id="rr0-lR-C46"/>
+                        <outlet property="s_finalidades" destination="vVg-Tf-8zi" id="ba6-5U-yD0"/>
+                        <outlet property="s_observar" destination="Eqf-DN-mEZ" id="6mL-L2-Q42"/>
+                        <outlet property="s_pesquisar" destination="6et-Rw-qRS" id="vfS-8S-rsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivJ-r8-W4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,18 +248,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIp-sQ-YhS">
-                                <rect key="frame" x="148" y="72.5" width="118" height="31.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Perguntar">
-                                        <attributes>
-                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="oqe-Vq-4Pu">
                                 <rect key="frame" x="171.5" y="730.5" width="71" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -297,10 +310,21 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDn-Qq-5Oo">
+                                <rect key="frame" x="148" y="72" width="118" height="32"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Perguntar">
+                                        <attributes>
+                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XIp-sQ-YhS" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="00Q-jm-FFy"/>
                             <constraint firstItem="oqe-Vq-4Pu" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="0Fk-Pf-Y3V"/>
                             <constraint firstItem="oqe-Vq-4Pu" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="301" id="0bn-63-Amk"/>
                             <constraint firstItem="fsN-ku-Upj" firstAttribute="trailing" secondItem="Izs-C2-B2J" secondAttribute="centerX" constant="182" id="AND-h4-0D6"/>
@@ -312,7 +336,8 @@
                             <constraint firstItem="fsN-ku-Upj" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-360" id="Sw4-R9-SB1"/>
                             <constraint firstItem="Tc5-5J-Ll1" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-360" id="UBm-4P-y5C"/>
                             <constraint firstItem="gXh-u1-5id" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="WDu-93-ckJ"/>
-                            <constraint firstItem="XIp-sQ-YhS" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-360" id="Xdb-5R-cIt"/>
+                            <constraint firstItem="aDn-Qq-5Oo" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-360" id="fTA-Xd-zzi"/>
+                            <constraint firstItem="aDn-Qq-5Oo" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="paA-2e-iUu"/>
                             <constraint firstItem="h1c-qU-bRX" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-100" id="sTq-dg-S8f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HyR-qp-IYe"/>
@@ -333,17 +358,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7u-Ha-33H">
-                                <rect key="frame" x="187.5" y="72" width="39" height="32"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Ler">
-                                        <attributes>
-                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWC-QY-Hkw">
                                 <rect key="frame" x="34" y="72" width="37" height="32"/>
                                 <constraints>
@@ -432,6 +446,18 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEY-gH-bGT">
+                                <rect key="frame" x="187.5" y="72" width="39" height="32"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Ler">
+                                        <attributes>
+                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -441,10 +467,10 @@
                             <constraint firstItem="5Sn-Sb-823" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="CqO-SP-Af7"/>
                             <constraint firstItem="ZWC-QY-Hkw" firstAttribute="leading" secondItem="uxK-I8-xnn" secondAttribute="centerX" constant="-173" id="D4G-3k-HBB"/>
                             <constraint firstItem="zR8-TN-P4w" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="200" id="GSM-IG-KoA"/>
-                            <constraint firstItem="C7u-Ha-33H" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="-360" id="I15-IK-sCS"/>
                             <constraint firstItem="5Sn-Sb-823" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="301" id="QpJ-4P-fLJ"/>
+                            <constraint firstItem="TEY-gH-bGT" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="RkK-g9-iTt"/>
                             <constraint firstItem="eGX-Uq-6Np" firstAttribute="trailing" secondItem="uxK-I8-xnn" secondAttribute="centerX" constant="182" id="aHs-Fg-tY6"/>
-                            <constraint firstItem="C7u-Ha-33H" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="b7a-2y-6uv"/>
+                            <constraint firstItem="TEY-gH-bGT" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="-360" id="dLX-2A-xPu"/>
                             <constraint firstItem="lLy-4m-1Pp" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="hzv-S6-HIx"/>
                             <constraint firstItem="eGX-Uq-6Np" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="-360" id="l4v-aX-fGO"/>
                             <constraint firstItem="Hms-a1-PPU" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="lsj-el-7b1"/>
@@ -466,18 +492,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gv-en-oqa">
-                                <rect key="frame" x="136" y="72" width="142" height="32"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Rememorar">
-                                        <attributes>
-                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdq-hk-Rc4">
                                 <rect key="frame" x="34" y="72" width="37" height="32"/>
                                 <constraints>
@@ -565,17 +579,29 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yA-xK-fnm">
+                                <rect key="frame" x="136" y="72" width="142" height="32"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Rememorar">
+                                        <attributes>
+                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pdq-hk-Rc4" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="-360" id="7PP-3n-709"/>
                             <constraint firstItem="82B-ym-dy6" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="301" id="ArW-Tf-dCJ"/>
-                            <constraint firstItem="1gv-en-oqa" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="BrB-hV-LOW"/>
                             <constraint firstItem="rai-xD-fJr" firstAttribute="trailing" secondItem="XEG-dn-nAd" secondAttribute="centerX" constant="182" id="F4p-jo-soX"/>
+                            <constraint firstItem="8yA-xK-fnm" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="JVu-bR-PqP"/>
                             <constraint firstItem="rai-xD-fJr" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="-360" id="TrY-W0-qwg"/>
                             <constraint firstItem="WuZ-R8-4Od" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="75" id="gb2-Cp-bu0"/>
-                            <constraint firstItem="1gv-en-oqa" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="-360" id="hlv-5e-lEc"/>
                             <constraint firstItem="pdq-hk-Rc4" firstAttribute="leading" secondItem="XEG-dn-nAd" secondAttribute="centerX" constant="-173" id="ibJ-hv-y1e"/>
+                            <constraint firstItem="8yA-xK-fnm" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="-360" id="jIs-vw-CYB"/>
                             <constraint firstItem="82B-ym-dy6" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="lE4-WX-Nk8"/>
                             <constraint firstItem="WuZ-R8-4Od" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="pws-p7-YWP"/>
                             <constraint firstItem="KDI-nS-yNe" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="rj7-xQ-e8W"/>
@@ -604,18 +630,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46m-sh-Dau">
-                                <rect key="frame" x="150" y="72" width="114" height="32"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Repassar">
-                                        <attributes>
-                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10t-ZC-U4I">
                                 <rect key="frame" x="34" y="72" width="37" height="32"/>
                                 <constraints>
@@ -684,6 +698,18 @@
                                     <segue destination="DJg-cy-cJu" kind="show" id="WPH-PK-7RV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-Ve-OmM">
+                                <rect key="frame" x="150" y="72" width="114" height="32"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Repassar">
+                                        <attributes>
+                                            <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -691,14 +717,14 @@
                             <constraint firstItem="cl7-hb-gPH" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="200" id="M6C-MO-b8e"/>
                             <constraint firstItem="lQh-Yc-slk" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="SQz-oI-mAj"/>
                             <constraint firstItem="10t-ZC-U4I" firstAttribute="leading" secondItem="hnu-nb-Fh8" secondAttribute="centerX" constant="-173" id="bJm-vl-jJf"/>
-                            <constraint firstItem="46m-sh-Dau" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="bX5-1X-bOH"/>
-                            <constraint firstItem="46m-sh-Dau" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="-360" id="dZx-r6-HV9"/>
                             <constraint firstItem="10t-ZC-U4I" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="-360" id="e55-V2-X3x"/>
+                            <constraint firstItem="IzG-Ve-OmM" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="ezw-JM-eXC"/>
                             <constraint firstItem="W7o-UD-Dch" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="-50" id="gBT-ol-jYz"/>
                             <constraint firstItem="Hxc-qb-Z5y" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="-360" id="i0D-1I-mf6"/>
                             <constraint firstItem="W7o-UD-Dch" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="lV2-KT-Qjl"/>
                             <constraint firstItem="lQh-Yc-slk" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="301" id="lWY-ZP-ffm"/>
                             <constraint firstItem="Hxc-qb-Z5y" firstAttribute="trailing" secondItem="hnu-nb-Fh8" secondAttribute="centerX" constant="182" id="ssj-xi-Xt6"/>
+                            <constraint firstItem="IzG-Ve-OmM" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="-360" id="wwq-xx-icT"/>
                             <constraint firstItem="cl7-hb-gPH" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="zvz-ok-hHe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hya-x3-ViX"/>
@@ -720,45 +746,22 @@
             </objects>
             <point key="canvasLocation" x="2880" y="-190"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="2Yy-k3-AQQ">
-            <objects>
-                <tabBarController id="5Kr-K4-TSq" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="khr-Bq-7hk"/>
-                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="MPm-go-y3T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="1bg-xy-BVH" kind="showDetail" id="Nrh-sG-So7"/>
-                        <segue destination="DJg-cy-cJu" kind="relationship" relationship="viewControllers" id="rLK-Zj-GSq"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H8l-lj-aV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1719" y="-190"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="73k-qW-d3F">
             <objects>
-                <navigationController navigationBarHidden="YES" id="A6Y-b9-Yku" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="A6Y-b9-Yku" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JD9-16-dmp">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5Kr-K4-TSq" kind="relationship" relationship="rootViewController" id="n9l-c2-aa5"/>
+                        <segue destination="1bg-xy-BVH" kind="relationship" relationship="rootViewController" id="Czv-WA-pD7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeA-oQ-tSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2400" y="-190"/>
+            <point key="canvasLocation" x="-1852" y="-190"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="rLK-Zj-GSq"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>

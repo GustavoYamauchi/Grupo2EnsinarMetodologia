@@ -18,17 +18,25 @@ import Foundation
 public class Estudo{
     public var Nome: String?
     public var Descricao: String?
-    
+    public var switch_f: Bool?
+    public var switch_o: Bool?
+    public var switch_p: Bool?
+    public var switch_d: Bool?
     
     init(Nome: String, Descricao: String) {
         self.Nome = Nome
-        self.Descricao = Descricao        
+        self.Descricao = Descricao
+        self.switch_f = false
+        self.switch_o = false
+        self.switch_p = false
+        self.switch_d = false
+        
     }
     
     func getNome() -> String {
         return self.Nome!
     }
-    
+
     func getDescricao() -> String {
         return self.Descricao!
     }

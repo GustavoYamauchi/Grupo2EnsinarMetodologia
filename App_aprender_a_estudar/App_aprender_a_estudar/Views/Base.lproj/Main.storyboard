@@ -44,9 +44,8 @@
                                     <navigationItem title="Home" id="VSh-U2-QR8"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-eG-XrN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-eG-XrN">
                                 <rect key="frame" x="149" y="665" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Teste das etapas"/>
                                 <connections>
                                     <segue destination="D69-OX-RMS" kind="show" id="2bu-LE-mRB"/>
@@ -55,9 +54,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="JKg-eG-XrN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="232" id="7Tu-og-A10"/>
                             <constraint firstItem="EJB-UD-Otd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="155" id="Rfk-pe-KcQ"/>
                             <constraint firstItem="jFa-Zb-lUu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-130.5" id="W6q-JS-JuU"/>
                             <constraint firstItem="EJB-UD-Otd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WmI-8V-eOW"/>
+                            <constraint firstItem="JKg-eG-XrN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XRc-gm-oA9"/>
                             <constraint firstItem="jFa-Zb-lUu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xby-8S-nj6"/>
                             <constraint firstItem="ejJ-Jv-8dd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YIr-qP-euk"/>
                             <constraint firstItem="ejJ-Jv-8dd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="26.5" id="yte-ow-YM9"/>
@@ -101,7 +102,7 @@
         <!--Etapas-->
         <scene sceneID="8pJ-CD-ve5">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Explorar" storyboardName="Etapas" referencedIdentifier="Etapas" id="D69-OX-RMS" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Ajuda" storyboardName="Etapas" id="D69-OX-RMS" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="cBR-NA-Ezl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aas-SI-QNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

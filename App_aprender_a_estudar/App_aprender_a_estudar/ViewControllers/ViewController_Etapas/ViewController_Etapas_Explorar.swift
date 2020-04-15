@@ -12,21 +12,46 @@ import UIKit
 
 class ViewController_Etapas_Explorar: UIViewController {
     
+    @IBOutlet weak var s_finalidades: UISwitch!
+    
+    @IBOutlet weak var s_observar: UISwitch!
+    
+    @IBOutlet weak var s_pesquisar: UISwitch!
+    
+    @IBOutlet weak var s_descobrir: UISwitch!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        //define se o botão estava ligado
         
-        // Do any additional setup after loading the view.
+        //falta conseguir pegar qual estudo do array o usuário entrou
+        
+//        s_finalidades.isOn = array[].switch_f!
+//
+//        s_observar.isOn = array[].switch_o!
+//
+//        s_pesquisar.isOn = array[].switch_p!
+//
+//        s_descobrir.isOn = array[].switch_d!
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func switch_finalidades(_ sender: Any) {
+//          array[].switch_f = s_finalidades.isOn
     }
-    */
-
+    
+    @IBAction func switch_observar(_ sender: Any) {
+//          array[].switch_o = s_observar.isOn
+    }
+    
+    @IBAction func switch_pesquisar(_ sender: Any) {
+//          array[].switch_p = s_pesquisar.isOn
+    }
+    
+    @IBAction func switch_descobrir(_ sender: Any) {
+//          array[].switch.d = s_descobrir.isOn
+    }
+    
 }
