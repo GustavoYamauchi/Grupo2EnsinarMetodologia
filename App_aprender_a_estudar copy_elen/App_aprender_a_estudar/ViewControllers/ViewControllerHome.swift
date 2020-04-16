@@ -76,6 +76,9 @@ class ViewControllerHome: UIViewController, UITableViewDataSource {
         print(sender.tag)
         
         array[Int(sender.tag)].remove(i: i)
+        
+        rec_data()
+        tableView.reloadData()
     }
     
     func rec_data(){
@@ -100,6 +103,9 @@ class ViewControllerHome: UIViewController, UITableViewDataSource {
 
          if(Int(arrayOfRead[0]) ?? -1 >= 0){
                 i = Int(arrayOfRead[0]) ?? 0
+        }
+         else{
+            i = -1
         }
 
          while (j <= i+1){
