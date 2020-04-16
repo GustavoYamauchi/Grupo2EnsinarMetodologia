@@ -67,17 +67,22 @@ public class Estudo{
         let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
         print("FilePath: \(fileURL.path)")
         
+        var fileexists = true
+        
         var readString = "" // Used to store the file contents
         do {
             // Read the file contents
             readString = try String(contentsOf: fileURL)
         } catch let error as NSError {
             print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+            fileexists = false
         }
          
-        let arrayOfRead = readString.components(separatedBy: " ˆ%$ ")
-        
-        self.Descricao = arrayOfRead[1]
+        if(fileexists == true){
+            let arrayOfRead = readString.components(separatedBy: " ˆ%$ ")
+            self.Descricao = arrayOfRead[1]
+        }
+            
     }
     
     func save_filename(i: Int){ //Não está salvando corretamente
