@@ -36,29 +36,33 @@ class ViewController_Etapas_Explorar: UIViewController {
         
         //falta conseguir pegar qual estudo do array o usuário entrou
         
-//        s_finalidades.isOn = array[].switch_f!
-//
-//        s_observar.isOn = array[].switch_o!
-//
-//        s_pesquisar.isOn = array[].switch_p!
-//
-//        s_descobrir.isOn = array[].switch_d!
+        s_finalidades.isOn = estudo.switch_f!
+
+        s_observar.isOn = estudo.switch_o!
+
+        s_pesquisar.isOn = estudo.switch_p!
+
+        s_descobrir.isOn = estudo.switch_d!
     }
     
     @IBAction func switch_finalidades(_ sender: Any) {
-//          array[].switch_f = s_finalidades.isOn
+        estudo.switch_f = s_finalidades.isOn
+        estudo.save()
     }
     
     @IBAction func switch_observar(_ sender: Any) {
-//          array[].switch_o = s_observar.isOn
+        estudo.switch_o = s_observar.isOn
+        estudo.save()
     }
     
     @IBAction func switch_pesquisar(_ sender: Any) {
-//          array[].switch_p = s_pesquisar.isOn
+        estudo.switch_p = s_pesquisar.isOn
+        estudo.save()
     }
     
     @IBAction func switch_descobrir(_ sender: Any) {
-//          array[].switch.d = s_descobrir.isOn
+        estudo.switch_d = s_descobrir.isOn
+        estudo.save()
     }
     
 }

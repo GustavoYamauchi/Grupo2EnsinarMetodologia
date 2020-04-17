@@ -10,9 +10,12 @@ import Foundation
 
 /*
  elementos dentro do arquivo de um estudo
- posição 1 = Nome
- posição 2 = Descricao
- posição 3 = Finalidade
+ posição 0 = Nome
+ posição 1 = Descricao
+ posição 2 = switch finalidade
+ posição 3 = switch observar
+ posição 4 = switch pesquisar
+ posição 5 = switch descobrir
 */
 
 public class Estudo{
@@ -47,7 +50,7 @@ public class Estudo{
         let fileURL = documentDirURL.appendingPathComponent(filename).appendingPathExtension("txt")
               print("FilePath: \(fileURL.path)")
          
-        let str = self.Nome! + " ˆ%$ " + self.Descricao!
+        let str = self.Nome! + " ˆ%$ " + self.Descricao! + " ˆ%$ " + self.switch_f!.description + " ˆ%$ " + self.switch_o!.description + " ˆ%$ " + self.switch_p!.description + " ˆ%$ " + self.switch_d!.description
         
         do {
             try str.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
@@ -81,11 +84,15 @@ public class Estudo{
         if(fileexists == true){
             let arrayOfRead = readString.components(separatedBy: " ˆ%$ ")
             self.Descricao = arrayOfRead[1]
+            self.switch_f = Bool(arrayOfRead[2])
+            self.switch_o = Bool(arrayOfRead[3])
+            self.switch_p = Bool(arrayOfRead[4])
+            self.switch_d = Bool(arrayOfRead[5])
         }
             
     }
     
-    func save_filename(i: Int){ //Não está salvando corretamente
+    func save_filename(i: Int){
         var j: Int = 1
         let fileName = "Nomes dos Arquivos"
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)

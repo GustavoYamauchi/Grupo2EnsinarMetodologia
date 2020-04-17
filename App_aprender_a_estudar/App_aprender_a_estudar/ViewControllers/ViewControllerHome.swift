@@ -50,6 +50,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         tableView.reloadData()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let criarEstudo = segue.destination as? ViewController_AddEstudo2 {
                 //print("passei")
@@ -66,7 +67,6 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
                     etapasEstudos.estudo = array[(tableView.indexPathForSelectedRow?.row)!]
                 }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
