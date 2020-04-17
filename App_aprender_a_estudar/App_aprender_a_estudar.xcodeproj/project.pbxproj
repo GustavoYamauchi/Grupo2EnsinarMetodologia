@@ -178,7 +178,7 @@
 				BDA860FB2432B62100EC3267 /* ViewController_AddEstudo.swift */,
 				8B70273224366FBA00ABAEE2 /* TableViewController.swift */,
 				8B7027342436720D00ABAEE2 /* CustomCell.swift */,
-                BDFE222E2444F8F7005CC6AF /* ViewController_Etapas */,       
+				BDFE222E2444F8F7005CC6AF /* ViewController_Etapas */,
 				8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */,
 				8B5835F8243FB5400083B681 /* ViewControllerHome.swift */,
 			);
