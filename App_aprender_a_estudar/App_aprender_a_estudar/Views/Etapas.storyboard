@@ -179,6 +179,13 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCZ-uS-Stu">
+                                <rect key="frame" x="34" y="161" width="355" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,6 +213,7 @@
                     <navigationItem key="navigationItem" id="Zl0-Sb-cTD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="labelName" destination="VCZ-uS-Stu" id="P40-H7-kpb"/>
                         <outlet property="s_descobrir" destination="d72-y6-wQq" id="rr0-lR-C46"/>
                         <outlet property="s_finalidades" destination="vVg-Tf-8zi" id="ba6-5U-yD0"/>
                         <outlet property="s_observar" destination="Eqf-DN-mEZ" id="6mL-L2-Q42"/>
@@ -749,7 +757,7 @@
         <!--Navigation Controller-->
         <scene sceneID="73k-qW-d3F">
             <objects>
-                <navigationController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="A6Y-b9-Yku" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="A6Y-b9-Yku" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JD9-16-dmp">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

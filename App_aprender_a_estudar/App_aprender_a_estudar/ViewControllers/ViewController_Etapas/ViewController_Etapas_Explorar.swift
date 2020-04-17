@@ -12,6 +12,8 @@ import UIKit
 
 class ViewController_Etapas_Explorar: UIViewController {
     
+    
+    
     @IBOutlet weak var s_finalidades: UISwitch!
     
     @IBOutlet weak var s_observar: UISwitch!
@@ -20,11 +22,16 @@ class ViewController_Etapas_Explorar: UIViewController {
     
     @IBOutlet weak var s_descobrir: UISwitch!
     
+    @IBOutlet weak var labelName: UILabel!
     
+    var estudo: Estudo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        labelName.text = estudo.Nome
+        
+        //labelName.text = estudo.Nome!
         //define se o botão estava ligado
         
         //falta conseguir pegar qual estudo do array o usuário entrou
