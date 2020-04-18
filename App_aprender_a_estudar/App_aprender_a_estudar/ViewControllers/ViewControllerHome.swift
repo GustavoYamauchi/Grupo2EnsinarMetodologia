@@ -48,7 +48,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let criarEstudo = segue.destination as? ViewController_AddEstudo2 {

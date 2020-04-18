@@ -178,6 +178,9 @@
                                 <state key="normal" title="Back" backgroundImage="arrow.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnBack:" destination="1bg-xy-BVH" eventType="touchUpInside" id="X5l-vx-Cmf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCZ-uS-Stu">
                                 <rect key="frame" x="34" y="161" width="355" height="21"/>
@@ -243,6 +246,9 @@
                                 <state key="normal" title="back" backgroundImage="arrow.left" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0Qj-QD-Ts4" kind="unwind" unwindAction="unwindToExplorar:" id="cRW-Ue-IIf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsN-ku-Upj">
                                 <rect key="frame" x="352" y="70" width="37" height="36"/>
@@ -355,6 +361,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrb-1I-g0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0Qj-QD-Ts4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-220.28985507246378" y="-190.17857142857142"/>
         </scene>
@@ -377,6 +384,9 @@
                                 <state key="normal" title="Back" backgroundImage="arrow.left" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="J9E-1S-J1z" kind="unwind" unwindAction="unwindToPerguntar:" id="qNo-ph-s3c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGX-Uq-6Np">
                                 <rect key="frame" x="352" y="70" width="37" height="36"/>
@@ -489,6 +499,7 @@
                     <navigationItem key="navigationItem" id="Rkd-ge-HbY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFp-Gw-5TH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="J9E-1S-J1z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="574" y="-190"/>
         </scene>
@@ -511,6 +522,9 @@
                                 <state key="normal" title="Back" backgroundImage="arrow.left" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tsW-t6-SMc" kind="unwind" unwindAction="unwindToLer:" id="0hT-yE-coF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rai-xD-fJr">
                                 <rect key="frame" x="352" y="70" width="37" height="36"/>
@@ -627,6 +641,7 @@
                     <navigationItem key="navigationItem" id="ruB-ul-bVC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqe-Hr-NWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tsW-t6-SMc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1433" y="-190"/>
         </scene>
@@ -646,6 +661,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <state key="normal" title="back" backgroundImage="arrow.left" catalog="system"/>
+                                <connections>
+                                    <segue destination="qlR-Cy-jCT" kind="unwind" unwindAction="unwindToLer:" id="Jrh-yO-IsB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxc-qb-Z5y">
                                 <rect key="frame" x="352" y="70" width="37" height="36"/>
@@ -740,6 +758,7 @@
                     <navigationItem key="navigationItem" id="1ej-Ym-xuk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoL-WP-wf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qlR-Cy-jCT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2253.6231884057975" y="-190.17857142857142"/>
         </scene>

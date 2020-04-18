@@ -26,6 +26,11 @@ class ViewController_Etapas_Explorar: UIViewController {
     
     var estudo: Estudo!
     
+    @IBAction func btnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +50,10 @@ class ViewController_Etapas_Explorar: UIViewController {
 //        s_descobrir.isOn = array[].switch_d!
     }
     
+    @IBAction func unwindToExplorar(_ unwindSegue: UIStoryboardSegue) {
+        //let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+    }
     @IBAction func switch_finalidades(_ sender: Any) {
 //          array[].switch_f = s_finalidades.isOn
     }
