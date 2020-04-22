@@ -79,7 +79,7 @@ class TableViewController: UITableViewController {
          while (j <= i+1){
             let estudo: Estudo = Estudo(Nome: "", Descricao: "")
             estudo.restore(file: arrayOfRead[j])
-             print(estudo.getNome())
+            print(estudo.Nome!)
              array.append(estudo)
             j += 1
         }

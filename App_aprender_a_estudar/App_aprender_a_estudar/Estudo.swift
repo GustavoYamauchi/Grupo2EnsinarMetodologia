@@ -16,32 +16,40 @@ import Foundation
  posição 3 = switch observar
  posição 4 = switch pesquisar
  posição 5 = switch descobrir
+ posição 6 = anotacoes_perguntas
+ posição 7 = respostas
+ posição 8 = resumo
+ posição 9 = reflexão
 */
 
 public class Estudo{
     public var Nome: String?
     public var Descricao: String?
+    
     public var switch_f: Bool?
     public var switch_o: Bool?
     public var switch_p: Bool?
     public var switch_d: Bool?
     
+    public var anotacoes_perguntas: String?
+    public var respostas: String?
+    public var resumo: String?
+    public var reflexao: String?
+    
     init(Nome: String, Descricao: String) {
         self.Nome = Nome
         self.Descricao = Descricao
+        
         self.switch_f = false
         self.switch_o = false
         self.switch_p = false
         self.switch_d = false
         
-    }
-    
-    func getNome() -> String {
-        return self.Nome!
-    }
-
-    func getDescricao() -> String {
-        return self.Descricao!
+        self.anotacoes_perguntas = ""
+        self.respostas = ""
+        self.resumo = ""
+        self.reflexao = ""
+        
     }
     
     func save() {
@@ -50,7 +58,8 @@ public class Estudo{
         let fileURL = documentDirURL.appendingPathComponent(filename).appendingPathExtension("txt")
               print("FilePath: \(fileURL.path)")
          
-        let str = self.Nome! + " ˆ%$ " + self.Descricao! + " ˆ%$ " + self.switch_f!.description + " ˆ%$ " + self.switch_o!.description + " ˆ%$ " + self.switch_p!.description + " ˆ%$ " + self.switch_d!.description
+        let str = self.Nome! + " ˆ%$ " + self.Descricao! + " ˆ%$ " + self.switch_f!.description + " ˆ%$ " + self.switch_o!.description + " ˆ%$ " + self.switch_p!.description + " ˆ%$ " + self.switch_d!.description + " ˆ%$ " + self.anotacoes_perguntas! + " ˆ%$ " + self.respostas! + " ˆ%$ " + self.resumo!
+            + " ˆ%$ " + self.reflexao!
         
         do {
             try str.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
@@ -84,10 +93,16 @@ public class Estudo{
         if(fileexists == true){
             let arrayOfRead = readString.components(separatedBy: " ˆ%$ ")
             self.Descricao = arrayOfRead[1]
+            
             self.switch_f = Bool(arrayOfRead[2])
             self.switch_o = Bool(arrayOfRead[3])
             self.switch_p = Bool(arrayOfRead[4])
             self.switch_d = Bool(arrayOfRead[5])
+            
+            self.anotacoes_perguntas = arrayOfRead[6]
+            self.respostas = arrayOfRead[7]
+            self.resumo = arrayOfRead[8]
+            self.reflexao = arrayOfRead[9]
         }
             
     }

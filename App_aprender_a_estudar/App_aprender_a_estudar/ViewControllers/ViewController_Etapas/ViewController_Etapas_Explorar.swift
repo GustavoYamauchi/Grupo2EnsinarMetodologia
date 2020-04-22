@@ -12,8 +12,6 @@ import UIKit
 
 class ViewController_Etapas_Explorar: UIViewController {
     
-    
-    
     @IBOutlet weak var s_finalidades: UISwitch!
     
     @IBOutlet weak var s_observar: UISwitch!
@@ -28,8 +26,6 @@ class ViewController_Etapas_Explorar: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        labelName.text = estudo.Nome
         
         //labelName.text = estudo.Nome!
         //define se o botão estava ligado
@@ -65,4 +61,15 @@ class ViewController_Etapas_Explorar: UIViewController {
         estudo.save()
     }
     
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let etapasEstudos: ViewController_CampoTexto  = segue.destination as?
+            ViewController_CampoTexto {
+            etapasEstudos.texto = estudo.anotacoes_perguntas
+        }
+    }
+    
+    @IBAction func AnotacoesPerguntas(_ sender: Any) {
+         
+        }
+    }
+

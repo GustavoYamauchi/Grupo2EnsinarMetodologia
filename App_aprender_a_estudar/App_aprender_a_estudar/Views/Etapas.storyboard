@@ -145,6 +145,10 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AnotacoesPerguntas:" destination="1bg-xy-BVH" eventType="touchUpInside" id="3ms-3u-z5E"/>
+                                    <segue destination="Xqf-St-LGy" kind="show" id="4J1-TG-JoY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-4F-AHm">
                                 <rect key="frame" x="164" y="605.5" width="86" height="85"/>
@@ -179,13 +183,6 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCZ-uS-Stu">
-                                <rect key="frame" x="34" y="161" width="355" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -213,7 +210,6 @@
                     <navigationItem key="navigationItem" id="Zl0-Sb-cTD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="labelName" destination="VCZ-uS-Stu" id="P40-H7-kpb"/>
                         <outlet property="s_descobrir" destination="d72-y6-wQq" id="rr0-lR-C46"/>
                         <outlet property="s_finalidades" destination="vVg-Tf-8zi" id="ba6-5U-yD0"/>
                         <outlet property="s_observar" destination="Eqf-DN-mEZ" id="6mL-L2-Q42"/>
@@ -223,6 +219,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivJ-r8-W4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-991.304347826087" y="-189.50892857142856"/>
+        </scene>
+        <!--CampoTexto-->
+        <scene sceneID="Crl-94-07S">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="campoTexto_nav" storyboardName="CampoTexto" referencedIdentifier="CampoTexto" id="Xqf-St-LGy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mmT-qq-t2a"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQY-Nk-zmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="520"/>
         </scene>
         <!--View Controller Etapas Perguntar-->
         <scene sceneID="7pQ-7E-hc0">
@@ -296,6 +302,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Xqf-St-LGy" kind="show" id="syR-hg-6fe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXh-u1-5id">
                                 <rect key="frame" x="66.5" y="499.5" width="281" height="47"/>
@@ -317,6 +326,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Xqf-St-LGy" kind="show" id="je5-PU-ypt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDn-Qq-5Oo">
                                 <rect key="frame" x="148" y="72" width="118" height="32"/>
@@ -431,6 +443,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Xqf-St-LGy" kind="show" id="pWW-Vl-fzo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-a1-PPU">
                                 <rect key="frame" x="66.5" y="499.5" width="281" height="47"/>
@@ -453,6 +468,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Xqf-St-LGy" kind="show" id="EpH-sq-b0Y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEY-gH-bGT">
                                 <rect key="frame" x="187.5" y="72" width="39" height="32"/>
@@ -545,6 +563,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Xqf-St-LGy" kind="show" id="Ufk-zA-EYo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuZ-R8-4Od">
                                 <rect key="frame" x="66.5" y="499.5" width="281" height="47"/>
@@ -566,6 +587,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Xqf-St-LGy" kind="show" id="zkC-bJ-jaz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnp-YE-c93">
                                 <rect key="frame" x="164" y="605.5" width="86" height="85"/>
@@ -770,6 +794,9 @@
             <point key="canvasLocation" x="-1852" y="-190"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4J1-TG-JoY"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
