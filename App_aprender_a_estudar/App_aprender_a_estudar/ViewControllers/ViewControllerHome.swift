@@ -19,7 +19,7 @@ extension ViewControllerHome: EstudoDelegate{
         array.append(estudo)
         i += 1
         print(i)
-        print("\n" + array[0].getNome())
+        print("\n" + array[0].Nome!)
         
         array[i].save() //salva um arquivo com as infos do objeto
         array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo
@@ -35,7 +35,7 @@ var i: Int = -1
 
 var array = [Estudo]()
 
-class ViewControllerHome: UIViewController, UITableViewDataSource {
+class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -43,16 +43,30 @@ class ViewControllerHome: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         rec_data()
     }
     
+    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        tableView.reloadData()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.destination)
             if let criarEstudo = segue.destination as? ViewController_AddEstudo2 {
-                print("passei")
+                //print("passei")
                 criarEstudo.estudoDelegate = self
             }
+        
+            if segue.identifier == "segueForEtapas"{
+                
+                let navController: UINavigationController = segue.destination as! UINavigationController
+                
+                //print(navController)
+                if let etapasEstudos: ViewController_Etapas_Explorar  = navController.viewControllers.first as?
+                    ViewController_Etapas_Explorar {
+                    etapasEstudos.estudoSelecionado = array[(tableView.indexPathForSelectedRow?.row)!]
+                }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,10 +86,17 @@ class ViewControllerHome: UIViewController, UITableViewDataSource {
         return newCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueForEtapas", sender: self)
+    }
+    
     @objc func excluirEstudo(sender: UIButton){
         print(sender.tag)
         
         array[Int(sender.tag)].remove(i: i)
+        
+        rec_data()
+        tableView.reloadData()
     }
     
     func rec_data(){
@@ -86,7 +107,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource {
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 
          let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
-        print("FilePath: \(fileURL.path)")
+        //print("FilePath: \(fileURL.path)")
 
          var readString = "" // Used to store the file contents
                 do {
@@ -101,11 +122,14 @@ class ViewControllerHome: UIViewController, UITableViewDataSource {
          if(Int(arrayOfRead[0]) ?? -1 >= 0){
                 i = Int(arrayOfRead[0]) ?? 0
         }
+         else{
+            i = -1
+        }
 
          while (j <= i+1){
             let estudo: Estudo = Estudo(Nome: "", Descricao: "")
             estudo.restore(file: arrayOfRead[j])
-             print(estudo.getNome())
+             print(estudo.Nome!)
              array.append(estudo)
             j += 1
         }

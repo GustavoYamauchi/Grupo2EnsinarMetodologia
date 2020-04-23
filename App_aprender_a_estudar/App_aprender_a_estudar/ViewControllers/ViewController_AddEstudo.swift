@@ -39,7 +39,7 @@ class ViewController_AddEstudo: UIViewController {
         
         i += 1
         print(i)
-        print("\n" + array[0].getNome())
+        print("\n" + array[0].Nome!)
         
         array[i].save() //salva um arquivo com as infos do objeto
         array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo

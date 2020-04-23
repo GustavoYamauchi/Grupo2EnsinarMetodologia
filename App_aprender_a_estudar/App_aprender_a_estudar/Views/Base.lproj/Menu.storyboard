@@ -104,6 +104,7 @@
                                             <constraints>
                                                 <constraint firstItem="x9m-Sk-dcc" firstAttribute="centerX" secondItem="PaW-5X-rT8" secondAttribute="centerX" constant="81.5" id="NVr-dr-Cwv"/>
                                                 <constraint firstItem="x9m-Sk-dcc" firstAttribute="centerY" secondItem="PaW-5X-rT8" secondAttribute="centerY" constant="-1" id="P6M-8c-moT"/>
+                                                <constraint firstItem="OU4-bI-hTs" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="PaW-5X-rT8" secondAttribute="centerX" constant="50" id="X62-RL-6C6"/>
                                                 <constraint firstItem="OU4-bI-hTs" firstAttribute="leading" secondItem="PaW-5X-rT8" secondAttribute="centerX" constant="-100" id="jkx-hX-ywc"/>
                                                 <constraint firstItem="OU4-bI-hTs" firstAttribute="centerY" secondItem="PaW-5X-rT8" secondAttribute="centerY" id="tpL-af-6ge"/>
                                             </constraints>
@@ -113,6 +114,7 @@
                                         <connections>
                                             <outlet property="btnExcluir" destination="x9m-Sk-dcc" id="vaq-zM-XST"/>
                                             <outlet property="label" destination="OU4-bI-hTs" id="hc3-RX-QMy"/>
+                                            <segue destination="655-Go-lSW" kind="show" identifier="segueForEtapas" id="OtR-sD-VUW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -128,13 +130,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="5W1-yh-aKX">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" id="hWz-uy-IQL">
+                        <textField key="titleView" opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Home" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" id="hWz-uy-IQL">
                             <rect key="frame" x="187.5" y="13" width="39" height="18.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Nei-Sm-KKp">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="Nei-Sm-KKp">
                             <connections>
                                 <action selector="novoestudo:" destination="feg-YM-RXK" id="yNI-cA-cdE"/>
                                 <segue destination="yso-7z-otG" kind="show" id="6c1-XG-efh"/>
@@ -150,6 +152,16 @@
             </objects>
             <point key="canvasLocation" x="-78.260869565217391" y="851.78571428571422"/>
         </scene>
+        <!--Etapas-->
+        <scene sceneID="IUC-59-kJj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Etapas" id="655-Go-lSW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PHM-wp-fX8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8o-Pc-uao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78" y="1331"/>
+        </scene>
         <!--Novo Estudo-->
         <scene sceneID="1Uz-zh-A11">
             <objects>
@@ -158,63 +170,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Descrição:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4p-2y-ou0">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4p-2y-ou0">
                                 <rect key="frame" x="31" y="311" width="239" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Descrição:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="label" size="12"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="O que você quer aprender?" translatesAutoresizingMaskIntoConstraints="NO" id="niZ-KP-OLC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niZ-KP-OLC">
                                 <rect key="frame" x="41" y="364" width="343" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="O que você quer aprender?">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9I-G8-Oo5">
-                                <rect key="frame" x="127" y="628" width="160" height="61"/>
-                                <color key="backgroundColor" red="0.0" green="0.62170995910000004" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Criar">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Categoria:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-Y7-gmJ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-Y7-gmJ">
                                 <rect key="frame" x="31" y="218" width="177" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Categoria:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="label" size="12"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="O que você quer aprender?" translatesAutoresizingMaskIntoConstraints="NO" id="7rf-Gz-T9l">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rf-Gz-T9l">
                                 <rect key="frame" x="166" y="223" width="218" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="O que você quer aprender?">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Título:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2t-DG-B3i">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2t-DG-B3i">
                                 <rect key="frame" x="31" y="140" width="177" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Título:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" metaFont="label" size="12"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxy-Ot-7YP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxy-Ot-7YP">
                                 <rect key="frame" x="166" y="145" width="218" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="name"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="k9I-G8-Oo5" firstAttribute="centerY" secondItem="Nwe-vt-GMJ" secondAttribute="centerY" id="WD8-Qb-h7d"/>
-                            <constraint firstItem="k9I-G8-Oo5" firstAttribute="centerX" secondItem="Nwe-vt-GMJ" secondAttribute="centerX" id="iTT-Pm-zpA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BAM-g2-KNT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Novo Estudo" id="oJs-p5-b55">
