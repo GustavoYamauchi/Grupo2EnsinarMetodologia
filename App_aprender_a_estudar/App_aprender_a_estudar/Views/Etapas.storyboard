@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A6Y-b9-Yku">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -184,14 +184,52 @@
                         <viewLayoutGuide key="safeArea" id="WZa-W2-7Dk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" id="Vv1-FO-SL4"/>
+<<<<<<< Updated upstream
                     <navigationItem key="navigationItem" id="Zl0-Sb-cTD"/>
+=======
+                    <navigationItem key="navigationItem" title="Explorar" id="Zl0-Sb-cTD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="sf0-hN-uYX"/>
+                        <barButtonItem key="leftBarButtonItem" title=" " image="chevron.left" catalog="system" id="WCR-3B-oKa">
+                            <connections>
+                                <action selector="btnVoltar:" destination="1bg-xy-BVH" id="pkw-3d-Eq1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="cMG-En-Pyn">
+                            <connections>
+                                <segue destination="hDm-rt-0ht" kind="presentation" id="8Eo-ya-6JI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+>>>>>>> Stashed changes
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivJ-r8-W4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-991.304347826087" y="-189.50892857142856"/>
         </scene>
+<<<<<<< Updated upstream
         <!--View Controller Etapas Perguntar-->
+=======
+        <!--CampoTexto-->
+        <scene sceneID="Crl-94-07S">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CampoTexto" storyboardName="CampoTexto" referencedIdentifier="CampoTexto" id="Xqf-St-LGy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mmT-qq-t2a"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQY-Nk-zmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="520"/>
+        </scene>
+        <!--Ajuda-->
+        <scene sceneID="Kk2-dP-bZN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ajuda" referencedIdentifier="Ajuda" id="hDm-rt-0ht" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCf-C4-A5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="-883"/>
+        </scene>
+        <!--Perguntar-->
+>>>>>>> Stashed changes
         <scene sceneID="7pQ-7E-hc0">
             <objects>
                 <viewController storyboardIdentifier="Perguntar" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GGd-fU-tvV" customClass="ViewController_Etapas_Perguntar" customModule="App_aprender_a_estudar" customModuleProvider="target" sceneMemberID="viewController">
@@ -317,8 +355,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HyR-qp-IYe"/>
                     </view>
+<<<<<<< Updated upstream
                     <navigationItem key="navigationItem" id="JgA-mp-Bib">
                         <barButtonItem key="backBarButtonItem" title="Volta" id="nwJ-PD-suE"/>
+=======
+                    <navigationItem key="navigationItem" title="Perguntar" id="JgA-mp-Bib">
+                        <barButtonItem key="backBarButtonItem" title=" " id="nwJ-PD-suE"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="p83-zv-rfv">
+                            <connections>
+                                <segue destination="hDm-rt-0ht" kind="presentation" id="X9r-BD-XSK"/>
+                            </connections>
+                        </barButtonItem>
+>>>>>>> Stashed changes
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrb-1I-g0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -452,7 +500,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ecq-TT-Y22"/>
                     </view>
+<<<<<<< Updated upstream
                     <navigationItem key="navigationItem" id="Rkd-ge-HbY"/>
+=======
+                    <navigationItem key="navigationItem" title="Ler" id="Rkd-ge-HbY">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Ssi-kQ-bvz"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="MjU-6r-JVk">
+                            <connections>
+                                <segue destination="hDm-rt-0ht" kind="presentation" id="O9a-2p-one"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+>>>>>>> Stashed changes
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFp-Gw-5TH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -590,7 +649,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dCI-vv-nPL"/>
                     </view>
+<<<<<<< Updated upstream
                     <navigationItem key="navigationItem" id="ruB-ul-bVC"/>
+=======
+                    <navigationItem key="navigationItem" title="Rememorar" id="ruB-ul-bVC">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Fk7-vc-LQv"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="sdT-0D-mvM">
+                            <connections>
+                                <segue destination="hDm-rt-0ht" kind="presentation" id="dMw-0V-1Vv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+>>>>>>> Stashed changes
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqe-Hr-NWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,7 +773,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hya-x3-ViX"/>
                     </view>
+<<<<<<< Updated upstream
                     <navigationItem key="navigationItem" id="1ej-Ym-xuk"/>
+=======
+                    <navigationItem key="navigationItem" title="Repassar" id="1ej-Ym-xuk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="a41-f4-o98"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="3l5-5J-Vak">
+                            <connections>
+                                <segue destination="hDm-rt-0ht" kind="presentation" id="jiD-Kl-AV9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+>>>>>>> Stashed changes
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoL-WP-wf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -757,7 +838,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+<<<<<<< Updated upstream
         <segue reference="rLK-Zj-GSq"/>
+=======
+        <segue reference="jiD-Kl-AV9"/>
+        <segue reference="zkC-bJ-jaz"/>
+>>>>>>> Stashed changes
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>

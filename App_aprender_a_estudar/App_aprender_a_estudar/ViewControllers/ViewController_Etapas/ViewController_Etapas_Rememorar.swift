@@ -16,6 +16,13 @@ class ViewController_Etapas_Rememorar: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let ajuda: ViewController_Ajuda = segue.destination as? ViewController_Ajuda {
+            ajuda.texto = "A quarta etapa deve ser aplicada ao fim de cada sessão de estudo, ou de cada mudança de capítulo. O estudante deve relembrar tudo que foi estudado, fazendo um pequeno resumo mental e anotando-o no papel. A intenção é fixar o que está solidificado e identificar pequenas lacunas que ainda estejam evidentes, como algum detalhe que não ficou totalmente esclarecido e dúvidas que ainda precisem ser sanadas."
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
