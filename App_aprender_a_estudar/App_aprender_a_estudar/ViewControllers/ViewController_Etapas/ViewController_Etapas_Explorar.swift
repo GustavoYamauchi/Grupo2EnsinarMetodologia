@@ -22,7 +22,7 @@ class ViewController_Etapas_Explorar: UIViewController {
     
     @IBOutlet weak var labelName: UILabel!
     
-    var estudo: Estudo!
+    var estudoSelecionado: Estudo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,40 +32,50 @@ class ViewController_Etapas_Explorar: UIViewController {
         
         //falta conseguir pegar qual estudo do array o usuário entrou
         
-        s_finalidades.isOn = estudo.switch_f!
+        s_finalidades.isOn = estudoSelecionado.switch_f!
 
-        s_observar.isOn = estudo.switch_o!
+        s_observar.isOn = estudoSelecionado.switch_o!
 
-        s_pesquisar.isOn = estudo.switch_p!
+        s_pesquisar.isOn = estudoSelecionado.switch_p!
 
-        s_descobrir.isOn = estudo.switch_d!
+        s_descobrir.isOn = estudoSelecionado.switch_d!
     }
     
     @IBAction func switch_finalidades(_ sender: Any) {
-        estudo.switch_f = s_finalidades.isOn
-        estudo.save()
+        estudoSelecionado.switch_f = s_finalidades.isOn
+        estudoSelecionado.save()
     }
     
     @IBAction func switch_observar(_ sender: Any) {
-        estudo.switch_o = s_observar.isOn
-        estudo.save()
+        estudoSelecionado.switch_o = s_observar.isOn
+        estudoSelecionado.save()
     }
     
     @IBAction func switch_pesquisar(_ sender: Any) {
-        estudo.switch_p = s_pesquisar.isOn
-        estudo.save()
+        estudoSelecionado.switch_p = s_pesquisar.isOn
+        estudoSelecionado.save()
     }
     
     @IBAction func switch_descobrir(_ sender: Any) {
-        estudo.switch_d = s_descobrir.isOn
-        estudo.save()
+        estudoSelecionado.switch_d = s_descobrir.isOn
+        estudoSelecionado.save()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let etapasEstudos: ViewController_CampoTexto  = segue.destination as?
+        if let campoTexto: ViewController_CampoTexto  = segue.destination as?
             ViewController_CampoTexto {
-            etapasEstudos.texto = estudo.anotacoes_perguntas
+            campoTexto.texto = estudoSelecionado.anotacoes_perguntas
+            campoTexto.tela = "anotacoes_perguntas"
         }
+        
+        if let perguntar: ViewController_Etapas_Perguntar  = segue.description as?
+            ViewController_Etapas_Perguntar {
+            perguntar.estudoSelecionado = estudoSelecionado
+        }
+    }
+    
+    @IBAction func btnVoltar(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func AnotacoesPerguntas(_ sender: Any) {

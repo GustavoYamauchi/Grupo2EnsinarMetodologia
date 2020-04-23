@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController_Etapas_Perguntar: UIViewController {
 
+    var estudoSelecionado: Estudo?
+    
+    var tela: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,5 +30,25 @@ class ViewController_Etapas_Perguntar: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func anotacoes_perguntas(_ sender: Any) {
+        tela = "anotacoes_perguntas"
+        print("tela anotacoes")
+    }
+    
+    @IBAction func respostas(_ sender: Any) {
+        tela = "respostas"
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let campoTexto: ViewController_CampoTexto  = segue.destination as?
+            ViewController_CampoTexto {
+            campoTexto.estudoSelecionado = estudoSelecionado
+            campoTexto.tela = self.tela
+        }
+    }
+    
+    
+    
 }

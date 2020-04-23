@@ -64,7 +64,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
                 //print(navController)
                 if let etapasEstudos: ViewController_Etapas_Explorar  = navController.viewControllers.first as?
                     ViewController_Etapas_Explorar {
-                    etapasEstudos.estudo = array[(tableView.indexPathForSelectedRow?.row)!]
+                    etapasEstudos.estudoSelecionado = array[(tableView.indexPathForSelectedRow?.row)!]
                 }
         }
     }
