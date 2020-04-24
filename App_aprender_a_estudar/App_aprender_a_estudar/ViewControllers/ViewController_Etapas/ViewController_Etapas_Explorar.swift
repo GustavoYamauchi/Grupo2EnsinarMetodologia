@@ -72,6 +72,10 @@ class ViewController_Etapas_Explorar: UIViewController {
             ViewController_Etapas_Perguntar {
             perguntar.estudoSelecionado = estudoSelecionado
         }
+        
+        if let ajuda: ViewController_Ajuda = segue.destination as? ViewController_Ajuda {
+            ajuda.texto = "O primeiro passo se refere mais ao estudo de um livro-texto, seja um didático ou um romance (como da lista de obras obrigatórias, por exemplo). Consiste realmente em explorar aquela obra: quais são as finalidades do autor? O que ele quis passar com aquele conteúdo? O método considera também que se deve observar a obra como um todo. Em resumo, o mais importante na primeira etapa é descobrir o livro e o seu conteúdo, deixando a curiosidade levar."
+        }
     }
     
     @IBAction func btnVoltar(_ sender: Any) {

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A6Y-b9-Yku">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -171,7 +171,11 @@
                                 <action selector="btnVoltar:" destination="1bg-xy-BVH" id="pkw-3d-Eq1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="cMG-En-Pyn"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="cMG-En-Pyn">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="phh-yT-MAA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -289,12 +293,24 @@
                     </view>
                     <navigationItem key="navigationItem" title="Perguntar" id="JgA-mp-Bib">
                         <barButtonItem key="backBarButtonItem" title=" " id="nwJ-PD-suE"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="p83-zv-rfv"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="p83-zv-rfv">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="a26-2t-WLx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrb-1I-g0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220.28985507246378" y="-190.17857142857142"/>
+        </scene>
+        <!--Ajuda-->
+        <scene sceneID="W87-MB-WQD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Ajuda" storyboardName="Ajuda" referencedIdentifier="Ajuda" id="7QB-EQ-ECj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSo-J9-P6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="-913"/>
         </scene>
         <!--Ler-->
         <scene sceneID="cUn-Ub-92H">
@@ -390,7 +406,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ler" id="Rkd-ge-HbY">
                         <barButtonItem key="backBarButtonItem" title=" " id="Ssi-kQ-bvz"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="MjU-6r-JVk"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="MjU-6r-JVk">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="Rgv-rB-5GW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFp-Gw-5TH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -495,7 +515,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rememorar" id="ruB-ul-bVC">
                         <barButtonItem key="backBarButtonItem" title=" " id="Fk7-vc-LQv"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="sdT-0D-mvM"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="sdT-0D-mvM">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="01F-rm-UgP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqe-Hr-NWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -575,7 +599,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Repassar" id="1ej-Ym-xuk">
                         <barButtonItem key="backBarButtonItem" title=" " id="a41-f4-o98"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="3l5-5J-Vak"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="3l5-5J-Vak">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="PGN-R3-jeF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoL-WP-wf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -611,7 +639,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="syR-hg-6fe"/>
+        <segue reference="PGN-R3-jeF"/>
+        <segue reference="zkC-bJ-jaz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>

@@ -16,6 +16,13 @@ class ViewController_Etapas_Ler: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let ajuda: ViewController_Ajuda = segue.destination as? ViewController_Ajuda {
+            ajuda.texto = "No caso, ler consiste em analisar e resumir. Trata-se de uma leitura aprofundada e atenta, com finalidade de produzir pensamento crítico. O estudante deve saber identificar as partes fundamentais do texto e saber diferenciá-las das complementares. O modo ideal de seguir este passo é fazendo anotações, sublinhando e grifando partes importantes do texto e elaborar esquemas que possam ser usados na revisão."
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
