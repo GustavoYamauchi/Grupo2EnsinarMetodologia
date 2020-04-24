@@ -1,0 +1,9 @@
+ platform :ios, '13.0'
+
+target 'App_aprender_a_estudar' do
+use_frameworks!
+
+pod 'SunburstDiagram', '~> 1.1.0'
+pod "Charts"
+
+end

@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - SunburstDiagram (1.1.0)
+
+DEPENDENCIES:
+  - Charts
+  - SunburstDiagram (~> 1.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - SunburstDiagram
+
+SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  SunburstDiagram: 156620d9fe81d87156291ae4e3d9391a67b9d0e4
+
+PODFILE CHECKSUM: 1a87294db02c4955f54aebf165c42b74aac0a5cf
+
+COCOAPODS: 1.9.1

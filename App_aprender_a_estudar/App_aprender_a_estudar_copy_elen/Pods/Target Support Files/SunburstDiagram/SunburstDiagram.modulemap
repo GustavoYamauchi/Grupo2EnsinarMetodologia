@@ -1,0 +1,6 @@
+framework module SunburstDiagram {
+  umbrella header "SunburstDiagram-umbrella.h"
+
+  export *
+  module * { export * }
+}
