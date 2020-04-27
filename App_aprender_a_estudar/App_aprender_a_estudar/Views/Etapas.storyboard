@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A6Y-b9-Yku">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Explorar-->
         <scene sceneID="8zE-6D-a5L">
             <objects>
-                <viewController storyboardIdentifier="Etapas" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bg-xy-BVH" customClass="ViewController_Etapas_Explorar" customModule="App_aprender_a_estudar" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Etapas" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bg-xy-BVH" customClass="ViewController_Etapas_Explorar" customModule="App_aprender_a_estudar" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3mE-U1-OaM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AnotacoesPerguntas:" destination="1bg-xy-BVH" eventType="touchUpInside" id="3ms-3u-z5E"/>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="4J1-TG-JoY"/>
+                                    <action selector="perguntas:" destination="1bg-xy-BVH" eventType="touchUpInside" id="w7n-49-s0H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-4F-AHm">
@@ -183,6 +183,7 @@
                         <outlet property="s_finalidades" destination="vVg-Tf-8zi" id="ba6-5U-yD0"/>
                         <outlet property="s_observar" destination="Eqf-DN-mEZ" id="6mL-L2-Q42"/>
                         <outlet property="s_pesquisar" destination="6et-Rw-qRS" id="vfS-8S-rsX"/>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="pAS-28-aO2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivJ-r8-W4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -197,7 +198,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQY-Nk-zmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="520"/>
+            <point key="canvasLocation" x="651" y="517"/>
         </scene>
         <!--Perguntar-->
         <scene sceneID="7pQ-7E-hc0">
@@ -249,21 +250,21 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="anotacoes_perguntas:" destination="GGd-fU-tvV" eventType="touchUpInside" id="gQ4-m4-ueH"/>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="syR-hg-6fe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXh-u1-5id">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-C2-3ux">
                                 <rect key="frame" x="66.5" y="499.5" width="281" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="1ZZ-5b-M05"/>
-                                    <constraint firstAttribute="width" constant="281" id="GFM-OO-ZPs"/>
+                                    <constraint firstAttribute="height" constant="47" id="6hn-4a-qfo"/>
+                                    <constraint firstAttribute="width" constant="281" id="azU-BI-H6j"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Respostas">
                                             <attributes>
-                                                <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                                <font key="NSFont" size="27" name="SFCompactDisplay-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -273,8 +274,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="respostas:" destination="GGd-fU-tvV" eventType="touchUpInside" id="gJi-cw-KkG"/>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="je5-PU-ypt"/>
+                                    <action selector="respostas:" destination="GGd-fU-tvV" eventType="touchUpInside" id="xDY-mt-7Eh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -282,11 +282,11 @@
                         <constraints>
                             <constraint firstItem="oqe-Vq-4Pu" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="0Fk-Pf-Y3V"/>
                             <constraint firstItem="oqe-Vq-4Pu" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="301" id="0bn-63-Amk"/>
+                            <constraint firstItem="7Pi-C2-3ux" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="5Vh-HA-UoT"/>
                             <constraint firstItem="h1c-qU-bRX" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="Bmo-Tm-jzT"/>
                             <constraint firstItem="9F2-Qi-Ary" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="In2-sx-VsX"/>
                             <constraint firstItem="9F2-Qi-Ary" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="200" id="MpR-1H-7Jz"/>
-                            <constraint firstItem="gXh-u1-5id" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="75" id="SjB-8P-4mS"/>
-                            <constraint firstItem="gXh-u1-5id" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="WDu-93-ckJ"/>
+                            <constraint firstItem="7Pi-C2-3ux" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="75" id="qIY-a8-7wS"/>
                             <constraint firstItem="h1c-qU-bRX" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-100" id="sTq-dg-S8f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HyR-qp-IYe"/>
@@ -299,6 +299,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="8BR-6N-36T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrb-1I-g0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,10 +310,12 @@
         <!--Ajuda-->
         <scene sceneID="W87-MB-WQD">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Ajuda" storyboardName="Ajuda" referencedIdentifier="Ajuda" id="7QB-EQ-ECj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Ajuda" storyboardName="Ajuda" referencedIdentifier="Ajuda" id="7QB-EQ-ECj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XU9-Y7-rt1"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSo-J9-P6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="-913"/>
+            <point key="canvasLocation" x="469" y="-964"/>
         </scene>
         <!--Ler-->
         <scene sceneID="cUn-Ub-92H">
@@ -362,7 +367,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="pWW-Vl-fzo"/>
+                                    <action selector="resumo:" destination="KNy-TT-3V5" eventType="touchUpInside" id="x0O-MX-iqT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-a1-PPU">
@@ -387,7 +392,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="EpH-sq-b0Y"/>
+                                    <action selector="reflexao:" destination="KNy-TT-3V5" eventType="touchUpInside" id="xgi-0t-tmP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -412,6 +417,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="qpQ-TQ-LTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFp-Gw-5TH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -434,7 +442,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Notas Anteriores">
+                                        <fragment content="Rever resumo">
                                             <attributes>
                                                 <font key="NSFont" size="27" name="SFCompactDisplay-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -447,7 +455,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="Ufk-zA-EYo"/>
+                                    <action selector="resumo:" destination="vqT-8O-azD" eventType="touchUpInside" id="CFf-Zd-awp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuZ-R8-4Od">
@@ -471,7 +479,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="zkC-bJ-jaz"/>
+                                    <action selector="add_perguntas:" destination="vqT-8O-azD" eventType="touchUpInside" id="Jbg-JW-WZt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnp-YE-c93">
@@ -521,6 +529,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="oMG-1R-8At"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqe-Hr-NWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -605,6 +616,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="cWU-hU-b6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoL-WP-wf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -639,8 +653,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PGN-R3-jeF"/>
-        <segue reference="zkC-bJ-jaz"/>
+        <segue reference="phh-yT-MAA"/>
+        <segue reference="pAS-28-aO2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>

@@ -24,6 +24,8 @@ class ViewController_Etapas_Explorar: UIViewController {
     
     var estudoSelecionado: Estudo!
     
+    var tela: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,16 +63,25 @@ class ViewController_Etapas_Explorar: UIViewController {
         estudoSelecionado.save()
     }
     
+    @IBAction func perguntas(_ sender: Any) {
+        performSegue(withIdentifier: "segueForCampoTexto", sender: 6)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let campoTexto: ViewController_CampoTexto  = segue.destination as?
-            ViewController_CampoTexto {
-            campoTexto.texto = estudoSelecionado.anotacoes_perguntas
-            campoTexto.tela = "anotacoes_perguntas"
+        if segue.identifier == "segueForCampoTexto"{
+            let navController: UINavigationController = segue.destination as! UINavigationController
+        
+            if let campoTexto: ViewController_CampoTexto = navController.viewControllers.first as? ViewController_CampoTexto{
+                tela = sender as? Int
+                print(tela as Any)
+                campoTexto.tela = tela
+                campoTexto.estudoSelecionado = estudoSelecionado
+                print("entrando no campo texto")
+            }
         }
         
-        if let perguntar: ViewController_Etapas_Perguntar  = segue.description as?
-            ViewController_Etapas_Perguntar {
+        if let perguntar: ViewController_Etapas_Perguntar = segue.destination as? ViewController_Etapas_Perguntar {
             perguntar.estudoSelecionado = estudoSelecionado
+            print("Entrando em perguntas")
         }
         
         if let ajuda: ViewController_Ajuda = segue.destination as? ViewController_Ajuda {
@@ -83,7 +94,7 @@ class ViewController_Etapas_Explorar: UIViewController {
     }
     
     @IBAction func AnotacoesPerguntas(_ sender: Any) {
-         
+         tela = 6
         }
     }
 

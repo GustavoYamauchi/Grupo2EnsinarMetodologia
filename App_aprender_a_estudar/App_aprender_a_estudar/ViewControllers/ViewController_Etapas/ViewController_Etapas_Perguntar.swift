@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController_Etapas_Perguntar: UIViewController {
 
-    var estudoSelecionado: Estudo?
+    var estudoSelecionado: Estudo!
     
-    var tela: String?
+    var tela: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,22 +30,31 @@ class ViewController_Etapas_Perguntar: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func anotacoes_perguntas(_ sender: Any) {
-        tela = "anotacoes_perguntas"
-        print("tela anotacoes")
+        performSegue(withIdentifier: "segueForCampoTexto", sender: 6)
     }
     
-    @IBAction func respostas(_ sender: Any) {
-        tela = "respostas"
-    }
-    
+   @IBAction func respostas(_ sender: Any) {
+        performSegue(withIdentifier: "segueForCampoTexto", sender: 7)
+   }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueForCampoTexto"{
+            let navController: UINavigationController = segue.destination as! UINavigationController
         
-        if let campoTexto: ViewController_CampoTexto  = segue.destination as?
-            ViewController_CampoTexto {
-            campoTexto.estudoSelecionado = estudoSelecionado
-            campoTexto.tela = self.tela
+            if let campoTexto: ViewController_CampoTexto = navController.viewControllers.first as? ViewController_CampoTexto{
+                tela = sender as? Int
+                print(tela as Any)
+                campoTexto.tela = tela
+                campoTexto.estudoSelecionado = estudoSelecionado
+                print("entrando no campo texto")
+            }
+        }
+        
+        if let ler: ViewController_Etapas_Ler = segue.destination as? ViewController_Etapas_Ler {
+            ler.estudoSelecionado = estudoSelecionado
+            print("Entrando em Ler")
         }
         
         if let ajuda: ViewController_Ajuda = segue.destination as? ViewController_Ajuda {
