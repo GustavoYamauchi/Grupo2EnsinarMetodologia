@@ -12,37 +12,29 @@ class ViewController_CampoTexto: UIViewController {
 
     @IBOutlet weak var Espaco_de_texto: UITextView!
     
-    var estudoSelecionado: Estudo?
+    var estudoSelecionado: Estudo!
     
-    var texto: String?
-    
-    var tela: String?
-    
+    var tela: Int!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        //não está entrando no switch case
         switch tela {
-            case "anotacoes_perguntas":
-                Espaco_de_texto.text = estudoSelecionado?.anotacoes_perguntas ?? ""
+            case 6:
+                Espaco_de_texto.text = estudoSelecionado.anotacoes_perguntas ?? ""
                 
-            case "respostas":
-                Espaco_de_texto.text = estudoSelecionado?.respostas ?? ""
+            case 7:
+                Espaco_de_texto.text = estudoSelecionado.respostas ?? ""
                 
-            case "resumo":
-                Espaco_de_texto.text = estudoSelecionado?.resumo ?? ""
+            case 8:
+                Espaco_de_texto.text = estudoSelecionado.resumo ?? ""
                 
-            case "reflexão":
-                Espaco_de_texto.text = estudoSelecionado?.reflexao ?? ""
+            case 9:
+                Espaco_de_texto.text = estudoSelecionado.reflexao ?? ""
             
             default:
                 Espaco_de_texto.text = ""
         }
-                
-        estudoSelecionado?.anotacoes_perguntas = Espaco_de_texto.text
-        estudoSelecionado?.save()
         // Do any additional setup after loading the view.
     }
     
@@ -50,23 +42,23 @@ class ViewController_CampoTexto: UIViewController {
         dismiss(animated: true, completion: nil)
         
         switch tela {
-            case "anotacoes_perguntas":
-                 estudoSelecionado?.anotacoes_perguntas = Espaco_de_texto.text
-                estudoSelecionado?.save()
-            case "respostas":
-                estudoSelecionado?.respostas = Espaco_de_texto.text
-                estudoSelecionado?.save()
+            case 6:
+                estudoSelecionado.anotacoes_perguntas = Espaco_de_texto.text
+                estudoSelecionado.save()
+            case 7:
+                estudoSelecionado.respostas = Espaco_de_texto.text
+                estudoSelecionado.save()
             
-            case "resumo":
-                estudoSelecionado?.resumo = Espaco_de_texto.text
-                estudoSelecionado?.save()
+            case 8:
+                estudoSelecionado.resumo = Espaco_de_texto.text
+                estudoSelecionado.save()
             
-            case "reflexão":
-                estudoSelecionado?.reflexao = Espaco_de_texto.text
-                estudoSelecionado?.save()
+            case 9:
+                estudoSelecionado.reflexao = Espaco_de_texto.text
+                estudoSelecionado.save()
             
             default:
-                estudoSelecionado?.save()
+                estudoSelecionado.save()
         }
     }
 }

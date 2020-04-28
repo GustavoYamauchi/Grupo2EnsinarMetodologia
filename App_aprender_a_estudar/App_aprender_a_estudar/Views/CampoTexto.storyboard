@@ -10,7 +10,7 @@
         <!--Campo Texto-->
         <scene sceneID="JQs-wl-J3B">
             <objects>
-                <viewController modalPresentationStyle="overFullScreen" id="UyD-K4-wxB" customClass="ViewController_CampoTexto" customModule="App_aprender_a_estudar" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="UyD-K4-wxB" customClass="ViewController_CampoTexto" customModule="App_aprender_a_estudar" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPQ-d5-Pvb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                         <viewLayoutGuide key="safeArea" id="noQ-ju-5EC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Campo Texto" id="ZAy-MQ-whk">
-                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.left" catalog="system" style="plain" id="OpR-0b-Fy3">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.left" catalog="system" style="done" id="OpR-0b-Fy3">
                             <connections>
                                 <action selector="btnVoltar:" destination="UyD-K4-wxB" id="Nrc-Sl-FL1"/>
                             </connections>
@@ -45,7 +45,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2Bc-eh-PzH">
             <objects>
-                <navigationController storyboardIdentifier="CampoTexto" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GTV-aB-VFA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CampoTexto" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GTV-aB-VFA" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="qUq-rC-XTH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

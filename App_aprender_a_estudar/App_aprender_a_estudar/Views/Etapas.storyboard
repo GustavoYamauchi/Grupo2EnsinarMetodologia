@@ -10,7 +10,7 @@
         <!--Explorar-->
         <scene sceneID="8zE-6D-a5L">
             <objects>
-                <viewController storyboardIdentifier="Etapas" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bg-xy-BVH" customClass="ViewController_Etapas_Explorar" customModule="App_aprender_a_estudar" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Etapas" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bg-xy-BVH" customClass="ViewController_Etapas_Explorar" customModule="App_aprender_a_estudar" customModuleProvider="target" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3mE-U1-OaM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AnotacoesPerguntas:" destination="1bg-xy-BVH" eventType="touchUpInside" id="3ms-3u-z5E"/>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="4J1-TG-JoY"/>
+                                    <action selector="perguntas:" destination="1bg-xy-BVH" eventType="touchUpInside" id="w7n-49-s0H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-4F-AHm">
@@ -146,10 +146,27 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sl-c7-eAA">
+                                <rect key="frame" x="57" y="119.5" width="300" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Ht6-ia-var"/>
+                                    <constraint firstAttribute="width" constant="300" id="Oh1-Rj-0Fq"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Explore o novo tema que iremos estudar">
+                                        <attributes>
+                                            <font key="NSFont" size="23" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7sl-c7-eAA" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="-291" id="4NS-x5-ufg"/>
                             <constraint firstItem="jKV-gb-d7a" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" constant="157.5" id="5D9-g5-5vN"/>
                             <constraint firstItem="D7C-Zg-KvC" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" id="6ef-QQ-84a"/>
                             <constraint firstItem="D7C-Zg-KvC" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="301" id="8cl-Mt-FVG"/>
@@ -160,6 +177,7 @@
                             <constraint firstItem="lsM-yX-nk2" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" id="b2B-WW-sbN"/>
                             <constraint firstItem="4aA-4F-AHm" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="200" id="fnV-zG-y88"/>
                             <constraint firstItem="lsM-yX-nk2" firstAttribute="centerY" secondItem="3mE-U1-OaM" secondAttribute="centerY" constant="75" id="poJ-1o-Rfc"/>
+                            <constraint firstItem="7sl-c7-eAA" firstAttribute="centerX" secondItem="3mE-U1-OaM" secondAttribute="centerX" id="vF2-sz-FZp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WZa-W2-7Dk"/>
                     </view>
@@ -171,7 +189,11 @@
                                 <action selector="btnVoltar:" destination="1bg-xy-BVH" id="pkw-3d-Eq1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="cMG-En-Pyn"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="cMG-En-Pyn">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="phh-yT-MAA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -179,6 +201,7 @@
                         <outlet property="s_finalidades" destination="vVg-Tf-8zi" id="ba6-5U-yD0"/>
                         <outlet property="s_observar" destination="Eqf-DN-mEZ" id="6mL-L2-Q42"/>
                         <outlet property="s_pesquisar" destination="6et-Rw-qRS" id="vfS-8S-rsX"/>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="pAS-28-aO2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivJ-r8-W4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -193,7 +216,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQY-Nk-zmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="520"/>
+            <point key="canvasLocation" x="651" y="517"/>
         </scene>
         <!--Perguntar-->
         <scene sceneID="7pQ-7E-hc0">
@@ -245,21 +268,21 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="anotacoes_perguntas:" destination="GGd-fU-tvV" eventType="touchUpInside" id="gQ4-m4-ueH"/>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="syR-hg-6fe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXh-u1-5id">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-C2-3ux">
                                 <rect key="frame" x="66.5" y="499.5" width="281" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="1ZZ-5b-M05"/>
-                                    <constraint firstAttribute="width" constant="281" id="GFM-OO-ZPs"/>
+                                    <constraint firstAttribute="height" constant="47" id="6hn-4a-qfo"/>
+                                    <constraint firstAttribute="width" constant="281" id="azU-BI-H6j"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Respostas">
                                             <attributes>
-                                                <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                                <font key="NSFont" size="27" name="SFCompactDisplay-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -269,32 +292,66 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="respostas:" destination="GGd-fU-tvV" eventType="touchUpInside" id="gJi-cw-KkG"/>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="je5-PU-ypt"/>
+                                    <action selector="respostas:" destination="GGd-fU-tvV" eventType="touchUpInside" id="xDY-mt-7Eh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwu-ct-S9K">
+                                <rect key="frame" x="57" y="119.5" width="300" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FCa-fs-EyM"/>
+                                    <constraint firstAttribute="height" constant="75" id="MMR-Eo-HLu"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Quais questões ainda não ficaram claras?">
+                                        <attributes>
+                                            <font key="NSFont" size="23" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oqe-Vq-4Pu" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="0Fk-Pf-Y3V"/>
                             <constraint firstItem="oqe-Vq-4Pu" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="301" id="0bn-63-Amk"/>
+                            <constraint firstItem="7Pi-C2-3ux" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="5Vh-HA-UoT"/>
                             <constraint firstItem="h1c-qU-bRX" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="Bmo-Tm-jzT"/>
                             <constraint firstItem="9F2-Qi-Ary" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="In2-sx-VsX"/>
                             <constraint firstItem="9F2-Qi-Ary" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="200" id="MpR-1H-7Jz"/>
-                            <constraint firstItem="gXh-u1-5id" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="75" id="SjB-8P-4mS"/>
-                            <constraint firstItem="gXh-u1-5id" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="WDu-93-ckJ"/>
+                            <constraint firstItem="Dwu-ct-S9K" firstAttribute="centerX" secondItem="Izs-C2-B2J" secondAttribute="centerX" id="ZcP-2X-TIi"/>
+                            <constraint firstItem="Dwu-ct-S9K" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-291" id="fzO-RY-gBv"/>
+                            <constraint firstItem="7Pi-C2-3ux" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="75" id="qIY-a8-7wS"/>
                             <constraint firstItem="h1c-qU-bRX" firstAttribute="centerY" secondItem="Izs-C2-B2J" secondAttribute="centerY" constant="-100" id="sTq-dg-S8f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HyR-qp-IYe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perguntar" id="JgA-mp-Bib">
                         <barButtonItem key="backBarButtonItem" title=" " id="nwJ-PD-suE"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="p83-zv-rfv"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="p83-zv-rfv">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="a26-2t-WLx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="8BR-6N-36T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrb-1I-g0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220.28985507246378" y="-190.17857142857142"/>
+        </scene>
+        <!--Ajuda-->
+        <scene sceneID="W87-MB-WQD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Ajuda" storyboardName="Ajuda" referencedIdentifier="Ajuda" id="7QB-EQ-ECj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XU9-Y7-rt1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSo-J9-P6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="469" y="-964"/>
         </scene>
         <!--Ler-->
         <scene sceneID="cUn-Ub-92H">
@@ -346,7 +403,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="pWW-Vl-fzo"/>
+                                    <action selector="resumo:" destination="KNy-TT-3V5" eventType="touchUpInside" id="x0O-MX-iqT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-a1-PPU">
@@ -371,27 +428,52 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="EpH-sq-b0Y"/>
+                                    <action selector="reflexao:" destination="KNy-TT-3V5" eventType="touchUpInside" id="xgi-0t-tmP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaS-6P-BJW">
+                                <rect key="frame" x="57" y="119.5" width="300" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="KR7-Xw-KG3"/>
+                                    <constraint firstAttribute="width" constant="300" id="it7-lm-N34"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Hora de aprofundar no assunto!">
+                                        <attributes>
+                                            <font key="NSFont" size="23" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hms-a1-PPU" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="75" id="3Lq-sJ-n8a"/>
+                            <constraint firstItem="WaS-6P-BJW" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="5Xf-Yg-sRe"/>
                             <constraint firstItem="zR8-TN-P4w" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="6N3-OL-mOO"/>
                             <constraint firstItem="5Sn-Sb-823" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="CqO-SP-Af7"/>
                             <constraint firstItem="zR8-TN-P4w" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="200" id="GSM-IG-KoA"/>
                             <constraint firstItem="5Sn-Sb-823" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="301" id="QpJ-4P-fLJ"/>
                             <constraint firstItem="lLy-4m-1Pp" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="hzv-S6-HIx"/>
                             <constraint firstItem="Hms-a1-PPU" firstAttribute="centerX" secondItem="uxK-I8-xnn" secondAttribute="centerX" id="lsj-el-7b1"/>
+                            <constraint firstItem="WaS-6P-BJW" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="-291" id="sRN-7E-UwW"/>
                             <constraint firstItem="lLy-4m-1Pp" firstAttribute="centerY" secondItem="uxK-I8-xnn" secondAttribute="centerY" constant="-100" id="sgF-Cf-lVw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ecq-TT-Y22"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ler" id="Rkd-ge-HbY">
                         <barButtonItem key="backBarButtonItem" title=" " id="Ssi-kQ-bvz"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="MjU-6r-JVk"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="MjU-6r-JVk">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="Rgv-rB-5GW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="qpQ-TQ-LTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFp-Gw-5TH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -414,7 +496,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Notas Anteriores">
+                                        <fragment content="Rever resumo">
                                             <attributes>
                                                 <font key="NSFont" size="27" name="SFCompactDisplay-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -427,7 +509,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="Ufk-zA-EYo"/>
+                                    <action selector="resumo:" destination="vqT-8O-azD" eventType="touchUpInside" id="CFf-Zd-awp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuZ-R8-4Od">
@@ -451,7 +533,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xqf-St-LGy" kind="show" id="zkC-bJ-jaz"/>
+                                    <action selector="add_perguntas:" destination="vqT-8O-azD" eventType="touchUpInside" id="Jbg-JW-WZt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnp-YE-c93">
@@ -474,11 +556,29 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-My-rvo">
+                                <rect key="frame" x="57" y="89.5" width="300" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="v0K-5J-GbW"/>
+                                    <constraint firstAttribute="width" constant="300" id="y4I-r8-kEF"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Existe algo que não ficou bem esclarecido? Vamos relembrar!">
+                                        <attributes>
+                                            <font key="NSFont" size="23" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="82B-ym-dy6" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="301" id="ArW-Tf-dCJ"/>
+                            <constraint firstItem="CaM-My-rvo" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="f5j-I3-dDy"/>
                             <constraint firstItem="WuZ-R8-4Od" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="75" id="gb2-Cp-bu0"/>
+                            <constraint firstItem="CaM-My-rvo" firstAttribute="centerY" secondItem="XEG-dn-nAd" secondAttribute="centerY" constant="-291" id="hMS-4d-rB8"/>
                             <constraint firstItem="82B-ym-dy6" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="lE4-WX-Nk8"/>
                             <constraint firstItem="WuZ-R8-4Od" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="pws-p7-YWP"/>
                             <constraint firstItem="KDI-nS-yNe" firstAttribute="centerX" secondItem="XEG-dn-nAd" secondAttribute="centerX" id="rj7-xQ-e8W"/>
@@ -495,8 +595,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rememorar" id="ruB-ul-bVC">
                         <barButtonItem key="backBarButtonItem" title=" " id="Fk7-vc-LQv"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="sdT-0D-mvM"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="sdT-0D-mvM">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="01F-rm-UgP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="oMG-1R-8At"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqe-Hr-NWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -560,12 +667,30 @@
                                     <segue destination="DJg-cy-cJu" kind="show" id="WPH-PK-7RV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-zO-wit">
+                                <rect key="frame" x="57" y="119.5" width="300" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="WiK-vl-1Kx"/>
+                                    <constraint firstAttribute="width" constant="300" id="Z0Y-Yt-fwJ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Foi compreendido tudo que foi estudado?">
+                                        <attributes>
+                                            <font key="NSFont" size="23" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cl7-hb-gPH" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="200" id="M6C-MO-b8e"/>
+                            <constraint firstItem="4T4-zO-wit" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="-291" id="PbX-fA-0Er"/>
                             <constraint firstItem="lQh-Yc-slk" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="SQz-oI-mAj"/>
+                            <constraint firstItem="4T4-zO-wit" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="cl0-y4-QUG"/>
                             <constraint firstItem="W7o-UD-Dch" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="-50" id="gBT-ol-jYz"/>
                             <constraint firstItem="W7o-UD-Dch" firstAttribute="centerX" secondItem="hnu-nb-Fh8" secondAttribute="centerX" id="lV2-KT-Qjl"/>
                             <constraint firstItem="lQh-Yc-slk" firstAttribute="centerY" secondItem="hnu-nb-Fh8" secondAttribute="centerY" constant="301" id="lWY-ZP-ffm"/>
@@ -575,8 +700,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Repassar" id="1ej-Ym-xuk">
                         <barButtonItem key="backBarButtonItem" title=" " id="a41-f4-o98"/>
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="3l5-5J-Vak"/>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="3l5-5J-Vak">
+                            <connections>
+                                <segue destination="7QB-EQ-ECj" kind="presentation" id="PGN-R3-jeF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="cWU-hU-b6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoL-WP-wf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -611,7 +743,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="syR-hg-6fe"/>
+        <segue reference="PGN-R3-jeF"/>
+        <segue reference="cWU-hU-b6b"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
