@@ -7,15 +7,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller Grafico-->
         <scene sceneID="kAn-W6-BBb">
             <objects>
-                <viewController id="lfB-d7-9yD" sceneMemberID="viewController">
+                <viewController id="lfB-d7-9yD" customClass="ViewControllerGrafico" customModule="App_aprender_a_estudar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oca-fc-5Gk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-S2-IBI">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-S2-IBI" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="87" y="139" width="240" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,9 +36,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="zET-I6-Gdg">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="3Ki-Pw-nk4"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8jn-8D-gKG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8jn-8D-gKG">
+                            <connections>
+                                <segue destination="KbO-OM-iiL" kind="show" id="d7i-a0-uxB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="grafico" destination="Kkb-S2-IBI" id="H8w-iW-YgH"/>
+                        <outlet property="sgcCategorias" destination="aiK-8G-iOK" id="hBC-a2-fRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cr-Nt-bdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,7 +74,6 @@
         <!--View Controller-->
         <scene sceneID="GLL-s1-br2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3xP-Q1-SKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="KbO-OM-iiL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SNs-HS-bR3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -130,9 +137,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="D3c-Sl-a1l"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Dpl-mW-1kQ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xP-Q1-SKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="41"/>
+            <point key="canvasLocation" x="1720" y="41"/>
         </scene>
     </scenes>
 </document>
