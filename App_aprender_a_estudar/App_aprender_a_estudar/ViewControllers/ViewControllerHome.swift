@@ -19,7 +19,7 @@ extension ViewControllerHome: EstudoDelegate{
         array.append(estudo)
         i += 1
         print(i)
-        print("\n" + array[0].Nome!)
+        print("\n" + array[0].nome!)
         
         array[i].save() //salva um arquivo com as infos do objeto
         array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo
@@ -77,7 +77,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
         
         let newCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
         
-        newCell.label?.text = array[indexPath.row].Nome
+        newCell.label?.text = array[indexPath.row].nome
         newCell.btnExcluir.tag = indexPath.row
         newCell.btnExcluir?.addTarget(self, action: #selector(excluirEstudo), for: .touchUpInside)
         
@@ -127,9 +127,9 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
         }
 
          while (j <= i+1){
-            let estudo: Estudo = Estudo(Nome: "", Descricao: "")
+            let estudo: Estudo = Estudo(Nome: "", Descricao: "", Materia: "")
             estudo.restore(file: arrayOfRead[j])
-             print(estudo.Nome!)
+             print(estudo.nome!)
              array.append(estudo)
             j += 1
         }

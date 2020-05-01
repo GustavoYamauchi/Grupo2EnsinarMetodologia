@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Foundation
+import Charts
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if UserDefaults.standard.array(forKey: "materias")?.count == 0 {
+           
+            var materias = [Materia]()
+            
+            materias.append(Materia(nome: "Teste", notas: [ChartDataEntry(x:1, y:2)]))
+            
+            
+            UserDefaults.standard.set(materias, forKey: "materias")
+            
+            //print(UserDefaults.standard.array(forKey: "materias"))
+        }
+        
         return true
     }
 
@@ -23,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
+        
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 

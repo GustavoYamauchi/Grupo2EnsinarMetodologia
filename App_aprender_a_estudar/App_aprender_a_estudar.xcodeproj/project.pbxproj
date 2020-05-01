@@ -16,6 +16,7 @@
 		8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70273224366FBA00ABAEE2 /* TableViewController.swift */; };
 		8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7027342436720D00ABAEE2 /* CustomCell.swift */; };
 		8BC6089C2459A4370058F4FA /* ViewControllerGrafico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6089B2459A4370058F4FA /* ViewControllerGrafico.swift */; };
+		8BCF3A14245B5C1100E101C1 /* Materia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCF3A13245B5C1100E101C1 /* Materia.swift */; };
 		8BCFB13A243E6B3000AEE223 /* ViewController_AddEstudo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */; };
 		A36127DD2453684900F72B2D /* ViewController_Ajuda.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36127DC2453684900F72B2D /* ViewController_Ajuda.swift */; };
 		BD2812D2244A41640015D84E /* ViewController_CampoTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2812D1244A41630015D84E /* ViewController_CampoTexto.swift */; };
@@ -33,7 +34,6 @@
 		BDA860FC2432B62100EC3267 /* ViewController_AddEstudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA860FB2432B62100EC3267 /* ViewController_AddEstudo.swift */; };
 		BDA860FF2432B66400EC3267 /* AddEstudo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA860FD2432B66400EC3267 /* AddEstudo.storyboard */; };
 		BDA86101243385B200EC3267 /* Estudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA86100243385B200EC3267 /* Estudo.swift */; };
-		BDE3F7152459FBED00D93CAF /* Nota.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3F7142459FBED00D93CAF /* Nota.swift */; };
 		BDE7B54C243FC191002CE578 /* ViewController_Etapas_Explorar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE7B54B243FC191002CE578 /* ViewController_Etapas_Explorar.swift */; };
 		BDFE22272444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE22262444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift */; };
 		BDFE22292444F850005CC6AF /* ViewController_Etapas_Ler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE22282444F850005CC6AF /* ViewController_Etapas_Ler.swift */; };
@@ -71,6 +71,7 @@
 		8B70273224366FBA00ABAEE2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B7027342436720D00ABAEE2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		8BC6089B2459A4370058F4FA /* ViewControllerGrafico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGrafico.swift; sourceTree = "<group>"; };
+		8BCF3A13245B5C1100E101C1 /* Materia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materia.swift; sourceTree = "<group>"; };
 		8BCFB139243E6B3000AEE223 /* ViewController_AddEstudo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_AddEstudo2.swift; sourceTree = "<group>"; };
 		A36127DC2453684900F72B2D /* ViewController_Ajuda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Ajuda.swift; sourceTree = "<group>"; };
 		A7BE471BA6FC5A642E10AD65 /* Pods-App_aprender_a_estudar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App_aprender_a_estudar.debug.xcconfig"; path = "Target Support Files/Pods-App_aprender_a_estudar/Pods-App_aprender_a_estudar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		BDA860FB2432B62100EC3267 /* ViewController_AddEstudo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController_AddEstudo.swift; path = App_aprender_a_estudar/ViewControllers/ViewController_AddEstudo.swift; sourceTree = SOURCE_ROOT; };
 		BDA860FE2432B66400EC3267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = App_aprender_a_estudar/Views/Base.lproj/AddEstudo.storyboard; sourceTree = "<group>"; };
 		BDA86100243385B200EC3267 /* Estudo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Estudo.swift; path = App_aprender_a_estudar/Estudo.swift; sourceTree = SOURCE_ROOT; };
-		BDE3F7142459FBED00D93CAF /* Nota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Nota.swift; path = /Users/rodrigoryoaoki/Documents/GitHub/Grupo2EnsinarMetodologia/App_aprender_a_estudar/App_aprender_a_estudar/Nota.swift; sourceTree = "<absolute>"; };
 		BDE7B54B243FC191002CE578 /* ViewController_Etapas_Explorar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Explorar.swift; sourceTree = "<group>"; };
 		BDFE22262444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Perguntar.swift; sourceTree = "<group>"; };
 		BDFE22282444F850005CC6AF /* ViewController_Etapas_Ler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Etapas_Ler.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 				BDA860B5243263ED00EC3267 /* AppDelegate.swift */,
 				BDA860B7243263ED00EC3267 /* SceneDelegate.swift */,
 				BDA86100243385B200EC3267 /* Estudo.swift */,
-				BDE3F7142459FBED00D93CAF /* Nota.swift */,
+				8BCF3A13245B5C1100E101C1 /* Materia.swift */,
 				BDA860E72432691700EC3267 /* ViewControllers */,
 				BDA860E82432692F00EC3267 /* Views */,
 				BDA860BE243263EE00EC3267 /* Assets.xcassets */,
@@ -434,7 +434,6 @@
 				BDA860BA243263ED00EC3267 /* ViewController_main.swift in Sources */,
 				BDFE22272444F82B005CC6AF /* ViewController_Etapas_Perguntar.swift in Sources */,
 				BDA860E62432691000EC3267 /* ViewController_menu.swift in Sources */,
-				BDE3F7152459FBED00D93CAF /* Nota.swift in Sources */,
 				BDA860B6243263ED00EC3267 /* AppDelegate.swift in Sources */,
 				BDFE22292444F850005CC6AF /* ViewController_Etapas_Ler.swift in Sources */,
 				BDFE222B2444F870005CC6AF /* ViewController_Etapas_Rememorar.swift in Sources */,
@@ -445,6 +444,7 @@
 				BDE7B54C243FC191002CE578 /* ViewController_Etapas_Explorar.swift in Sources */,
 				BDA86101243385B200EC3267 /* Estudo.swift in Sources */,
 				8BCFB13A243E6B3000AEE223 /* ViewController_AddEstudo2.swift in Sources */,
+				8BCF3A14245B5C1100E101C1 /* Materia.swift in Sources */,
 				BD2812D2244A41640015D84E /* ViewController_CampoTexto.swift in Sources */,
 				BDA860FC2432B62100EC3267 /* ViewController_AddEstudo.swift in Sources */,
 				BDA860B8243263ED00EC3267 /* SceneDelegate.swift in Sources */,

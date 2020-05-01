@@ -7,11 +7,11 @@
 //
 
 import Foundation
-
+import Charts
 /*
  elementos dentro do arquivo de um estudo
- posição 0 = Nome
- posição 1 = Descricao
+ posição 0 = nome
+ posição 1 = descricao
  posição 2 = switch finalidade
  posição 3 = switch observar
  posição 4 = switch pesquisar
@@ -20,11 +20,12 @@ import Foundation
  posição 7 = respostas
  posição 8 = resumo
  posição 9 = reflexão
+ posição 10 = materia
 */
 
 public class Estudo{
-    public var Nome: String?
-    public var Descricao: String?
+    public var nome: String?
+    public var descricao: String?
     
     public var switch_f: Bool?
     public var switch_o: Bool?
@@ -35,10 +36,11 @@ public class Estudo{
     public var respostas: String?
     public var resumo: String?
     public var reflexao: String?
+    public var materia: String?
     
-    init(Nome: String, Descricao: String) {
-        self.Nome = Nome
-        self.Descricao = Descricao
+    init(Nome: String, Descricao: String, Materia: String) {
+        self.nome = Nome
+        self.descricao = Descricao
         
         self.switch_f = false
         self.switch_o = false
@@ -50,16 +52,18 @@ public class Estudo{
         self.resumo = ""
         self.reflexao = ""
         
+        self.materia = Materia
+        
     }
     
     func save() {
-        let filename = Nome!
+        let filename = self.nome!
         let documentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         let fileURL = documentDirURL.appendingPathComponent(filename).appendingPathExtension("txt")
               print("FilePath: \(fileURL.path)")
          
-        let str = self.Nome! + " ˆ%$ " + self.Descricao! + " ˆ%$ " + self.switch_f!.description + " ˆ%$ " + self.switch_o!.description + " ˆ%$ " + self.switch_p!.description + " ˆ%$ " + self.switch_d!.description + " ˆ%$ " + self.anotacoes_perguntas! + " ˆ%$ " + self.respostas! + " ˆ%$ " + self.resumo!
-            + " ˆ%$ " + self.reflexao!
+        let str = self.nome! + " ˆ%$ " + self.descricao! + " ˆ%$ " + self.switch_f!.description + " ˆ%$ " + self.switch_o!.description + " ˆ%$ " + self.switch_p!.description + " ˆ%$ " + self.switch_d!.description + " ˆ%$ " + self.anotacoes_perguntas! + " ˆ%$ " + self.respostas! + " ˆ%$ " + self.resumo!
+            + " ˆ%$ " + self.reflexao! + " ˆ%$ " + self.materia!
         
         do {
             try str.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
@@ -71,7 +75,7 @@ public class Estudo{
     }
     
     func restore(file: String) {
-        self.Nome = file
+        self.nome = file
         
         let fileName = file
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -92,7 +96,7 @@ public class Estudo{
          
         if(fileexists == true){
             let arrayOfRead = readString.components(separatedBy: " ˆ%$ ")
-            self.Descricao = arrayOfRead[1]
+            self.descricao = arrayOfRead[1]
             
             self.switch_f = Bool(arrayOfRead[2])
             self.switch_o = Bool(arrayOfRead[3])
@@ -103,6 +107,8 @@ public class Estudo{
             self.respostas = arrayOfRead[7]
             self.resumo = arrayOfRead[8]
             self.reflexao = arrayOfRead[9]
+            
+            self.materia = arrayOfRead[10]
         }
             
     }
@@ -123,7 +129,7 @@ public class Estudo{
         } catch let error as NSError {
             print("Failed reading from URL: \(fileURL), Criando: " + error.localizedDescription)
         }
-//        print("\n"+readString) Para olhar se está registrando e o que está sendo lido 
+//        print("\n"+readString) Para olhar se está registrando e o que está sendo lido
         let arrayOfRead = readString.components(separatedBy: "\n")
         
         var writeString = String(i) + "\n"
@@ -133,18 +139,28 @@ public class Estudo{
             j += 1
         }
         
-        writeString = writeString + self.Nome! + "\n"
+        writeString = writeString + self.nome! + "\n"
         
         do {
             try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
         } catch let error as NSError {
             print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
         }
+        
+        if UserDefaults.standard.array(forKey: "materias")?.count == 0{
+            var array = UserDefaults.standard.array(forKey: "materias")
+            
+            array?.append(Materia(nome: "Teste", notas: [ChartDataEntry(x:1, y:2)]))
+            
+            UserDefaults.standard.set(array, forKey: "materias")
+        }
+        
+        
     }
     
     func remove(i: Int){
         //apaga o arquivo em si
-        let fileNameToDelete = Nome! + ".txt"
+        let fileNameToDelete = nome! + ".txt"
                var filePath = ""
                
                // Fine documents directory on device
@@ -199,7 +215,7 @@ public class Estudo{
             var writeString = String(i-1) + "\n"
             
             while(j <= i+1){
-                if(arrayOfRead[j] != self.Nome){
+                if(arrayOfRead[j] != self.nome){
                         writeString = writeString + arrayOfRead[j]+"\n"
                 }
                 j += 1
