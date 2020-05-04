@@ -17,16 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if UserDefaults.standard.array(forKey: "materias")?.count == 0 {
+        if UserDefaults.standard.array(forKey: "Nome das Materias")?.count == nil {
            
-            var materias = [Materia]()
+            let nomes = [String]()
             
-            materias.append(Materia(nome: "Teste", notas: [ChartDataEntry(x:1, y:2)]))
-            
-            
-            UserDefaults.standard.set(materias, forKey: "materias")
-            
-            //print(UserDefaults.standard.array(forKey: "materias"))
+            UserDefaults.standard.set(nomes, forKey: "Nome das Materias")
         }
         
         return true

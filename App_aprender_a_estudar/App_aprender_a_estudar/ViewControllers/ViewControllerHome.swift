@@ -129,11 +129,10 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
          while (j <= i+1){
             let estudo: Estudo = Estudo(Nome: "", Descricao: "", Materia: "")
             estudo.restore(file: arrayOfRead[j])
-             print(estudo.nome!)
-             array.append(estudo)
+            print(estudo.nome!)
+            array.append(estudo)
             j += 1
         }
     }
-    
 }
 

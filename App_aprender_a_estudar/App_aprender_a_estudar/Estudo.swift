@@ -147,18 +147,19 @@ public class Estudo{
             print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
         }
         
-        if UserDefaults.standard.array(forKey: "materias")?.count == 0{
-            var array = UserDefaults.standard.array(forKey: "materias")
-            
-            array?.append(Materia(nome: "Teste", notas: [ChartDataEntry(x:1, y:2)]))
-            
-            UserDefaults.standard.set(array, forKey: "materias")
-        }
+//        if UserDefaults.standard.array(forKey: "materias")?.count == 0{
+//            var array = UserDefaults.standard.array(forKey: "materias")
+//            
+//            array?.append(Materia(nome: "Teste", notas: [ChartDataEntry(x:1, y:2)]))
+//            
+//            UserDefaults.standard.set(array, forKey: "materias")
+//        }
         
         
     }
     
-    func remove(i: Int){
+    func remove(i: Int){ //i seria o tamanho do array no momento e não a posição do estudo que quer ser removido
+        
         //apaga o arquivo em si
         let fileNameToDelete = nome! + ".txt"
                var filePath = ""
