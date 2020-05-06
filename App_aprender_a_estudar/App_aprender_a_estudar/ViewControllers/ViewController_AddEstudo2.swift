@@ -47,10 +47,16 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
         let descricao: String? = fieldDescricao.text
         var materia: String? = ""
         
-        if lblCategorias.isHidden{
+        if !lblCategorias.isHidden{
             materia = fieldCategoria.text
+            let objMateria = Materia(nome: materia!)
+            vetorMaterias.append(objMateria)
+            objMateria.salvar()
+            objMateria.salvarNomeMaterias()
+            
+            print(vetorMaterias[0].nome)
         }
-        
+
         let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!, Materia: materia!)
         
         estudoDelegate?.salvar(estudo: estudo)

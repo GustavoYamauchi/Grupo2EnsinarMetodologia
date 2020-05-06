@@ -14,6 +14,7 @@ public class Materia{
     public var nome: String?
     public var vetorNotas = [ChartDataEntry]()
         
+        
     init(nome: String){
         self.nome = nome
     }
@@ -32,16 +33,17 @@ public class Materia{
         }
     }
     
-    func salvar(materia: Materia){
-        UserDefaults.standard.set(materia.vetorNotas, forKey: materia.nome!)
+    func salvar(){
+        UserDefaults.standard.set(self.vetorNotas, forKey: self.nome!)
     }
     
-    func salvarNomeMaterias(materia: Materia){
-        
+    func salvarNomeMaterias(){
         var vetorNomesMaterias = [String]()
         vetorNomesMaterias = UserDefaults.standard.object(forKey: "Nome das Materias") as! [String]
-        vetorNomesMaterias.append(materia.nome!)
+        vetorNomesMaterias.append(self.nome!)
+        UserDefaults.standard.set(vetorNomesMaterias, forKey: "Nome das Materias")
     }
+
     
     func restaurarMateria(){
         if(UserDefaults.standard.object(forKey: self.nome!) as? [ChartDataEntry] != nil){  //Checa se o array existe
