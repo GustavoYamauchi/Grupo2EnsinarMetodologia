@@ -12,6 +12,7 @@
 		6E2181D3243C376C002AE0C8 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181D2243C376C002AE0C8 /* Etapas.storyboard */; };
 		6E2181D5243C3782002AE0C8 /* Ajuda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */; };
 		6E62C718243D054A00562D9E /* CampoTexto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E62C717243D054A00562D9E /* CampoTexto.storyboard */; };
+		8B430F772463539400E0CD32 /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B430F762463539400E0CD32 /* ChartXAxisFormatter.swift */; };
 		8B5835F9243FB5400083B681 /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5835F8243FB5400083B681 /* ViewControllerHome.swift */; };
 		8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70273224366FBA00ABAEE2 /* TableViewController.swift */; };
 		8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7027342436720D00ABAEE2 /* CustomCell.swift */; };
@@ -68,6 +69,7 @@
 		6E2181D4243C3782002AE0C8 /* Ajuda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ajuda.storyboard; sourceTree = "<group>"; };
 		6E62C717243D054A00562D9E /* CampoTexto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CampoTexto.storyboard; sourceTree = "<group>"; };
 		897CC26C795AE0D534AEE21F /* Pods_App_aprender_a_estudar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_aprender_a_estudar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B430F762463539400E0CD32 /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
 		8B5835F8243FB5400083B681 /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
 		8B70273224366FBA00ABAEE2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B7027342436720D00ABAEE2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				BD2812D1244A41630015D84E /* ViewController_CampoTexto.swift */,
 				A36127DC2453684900F72B2D /* ViewController_Ajuda.swift */,
 				8BA0B4D12461DCF200B6B654 /* ViewController_AddNota.swift */,
+				8B430F762463539400E0CD32 /* ChartXAxisFormatter.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				BDFE22292444F850005CC6AF /* ViewController_Etapas_Ler.swift in Sources */,
 				BDFE222B2444F870005CC6AF /* ViewController_Etapas_Rememorar.swift in Sources */,
 				8BC6089C2459A4370058F4FA /* ViewController_Grafico.swift in Sources */,
+				8B430F772463539400E0CD32 /* ChartXAxisFormatter.swift in Sources */,
 				8B70273324366FBA00ABAEE2 /* TableViewController.swift in Sources */,
 				BDFE222D2444F880005CC6AF /* ViewController_Etapas_Repassar.swift in Sources */,
 				8B7027352436720D00ABAEE2 /* CustomCell.swift in Sources */,

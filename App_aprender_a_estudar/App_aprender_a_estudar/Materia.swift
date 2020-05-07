@@ -12,7 +12,8 @@ import Charts
 
 public class Materia{
     public var nome: String?
-    public var vetorNotas = [ChartDataEntry]()
+    public var vetorNotas = [Double]()
+    public var vetorDatas = [Double]()
         
         
     init(nome: String){
@@ -21,20 +22,22 @@ public class Materia{
     
     
     func addNota(data: Double, nota: Double){ //recebe a nota e a data, adiciona no array de notas
-        let nota = ChartDataEntry(x: data, y: nota)
         self.vetorNotas.append(nota)
+        self.vetorDatas.append(data)
     }
     
     func deletarNota(i: Int){ //recebe a posição do array que quer remover
         var j = i
         while(j < self.vetorNotas.count-1){
             self.vetorNotas[j] = self.vetorNotas[j+1]
+            self.vetorDatas[j] = self.vetorDatas[j+1]
             j += 1
         }
     }
     
     func salvar(){
-        UserDefaults.standard.set(self.vetorNotas, forKey: self.nome!)
+        UserDefaults.standard.set(self.vetorNotas, forKey: self.nome! + "-notas")
+        UserDefaults.standard.set(self.vetorDatas, forKey: self.nome! + "-datas")
     }
     
     func salvarNomeMaterias(){
@@ -45,10 +48,13 @@ public class Materia{
     }
 
     
-    func restaurarMateria(){
-        if(UserDefaults.standard.object(forKey: self.nome!) as? [ChartDataEntry] != nil){  //Checa se o array existe
-            self.vetorNotas = UserDefaults.standard.object(forKey: self.nome!) as! [ChartDataEntry]
+    func restaurarMateria() -> Materia{
+        if(UserDefaults.standard.object(forKey: self.nome! + "-notas") != nil || UserDefaults.standard.object(forKey: self.nome! + "-datas") != nil){  //Checa se o array existe
+            self.vetorNotas = UserDefaults.standard.object(forKey: self.nome! + "-notas") as! [Double]
+            self.vetorDatas = UserDefaults.standard.object(forKey: self.nome! + "-datas") as! [Double]
         }
+        
+        return self
     }
 }
 
