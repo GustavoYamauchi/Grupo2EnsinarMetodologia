@@ -83,7 +83,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" focusStyle="custom" rowHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="1tO-2A-LO0" customClass="CustomCell" customModule="App_aprender_a_estudar" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" focusStyle="custom" rowHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="1tO-2A-LO0" customClass="CustomCell" customModule="App_aprender_a_estudar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1tO-2A-LO0" id="PaW-5X-rT8">
@@ -267,11 +267,30 @@
                                     <action selector="btnGrafico:" destination="yso-7z-otG" eventType="valueChanged" id="0Ui-rI-nJs"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ce-ph-cge">
+                                <rect key="frame" x="82" y="556" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="687-fz-I3f"/>
+                                    <constraint firstAttribute="height" constant="84" id="sgJ-De-VKA"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.060358078401955728" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="4Ce-ph-cge" firstAttribute="centerX" secondItem="Nwe-vt-GMJ" secondAttribute="centerX" id="2yx-Gt-33A"/>
                             <constraint firstItem="ifD-nc-6JK" firstAttribute="centerX" secondItem="Nwe-vt-GMJ" secondAttribute="centerX" constant="-135.5" id="50V-c7-Jum"/>
                             <constraint firstItem="hfw-aN-llY" firstAttribute="centerX" secondItem="Nwe-vt-GMJ" secondAttribute="centerX" constant="162.5" id="B8q-qb-fdg"/>
+                            <constraint firstItem="4Ce-ph-cge" firstAttribute="centerY" secondItem="Nwe-vt-GMJ" secondAttribute="centerY" constant="150" id="Cy6-4A-Q8C"/>
                             <constraint firstItem="hfw-aN-llY" firstAttribute="centerY" secondItem="Nwe-vt-GMJ" secondAttribute="centerY" constant="-51.5" id="IS9-VH-2Ea"/>
                             <constraint firstItem="ifD-nc-6JK" firstAttribute="centerY" secondItem="Nwe-vt-GMJ" secondAttribute="centerY" constant="-51.5" id="bah-nN-ID4"/>
                         </constraints>
@@ -285,6 +304,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Alerta" destination="4Ce-ph-cge" id="KIO-pe-fuJ"/>
                         <outlet property="fieldCategoria" destination="7rf-Gz-T9l" id="pRk-gg-5CK"/>
                         <outlet property="fieldDescricao" destination="niZ-KP-OLC" id="WC9-kr-oVw"/>
                         <outlet property="fieldTitulo" destination="Pxy-Ot-7YP" id="zWs-9q-9dy"/>

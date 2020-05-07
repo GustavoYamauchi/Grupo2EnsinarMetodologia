@@ -26,7 +26,7 @@ class ViewController_AddNota: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         let nota = Double(txtNota.text!)
         
-        let data = (pickerDataNota.date).timeIntervalSinceReferenceDate
+        let data = (pickerDataNota.date).timeIntervalSince1970
         
         
         

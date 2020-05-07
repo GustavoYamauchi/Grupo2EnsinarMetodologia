@@ -20,6 +20,8 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var fieldDescricao: UITextView!
     
+    @IBOutlet weak var Alerta: UILabel!
+    
     @IBAction func btnGrafico(_ sender: UISwitch) {
         lblCategorias.isHidden = !(lblCategorias.isHidden)
         fieldCategoria.isHidden = !(fieldCategoria.isHidden)
@@ -47,6 +49,9 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
         let descricao: String? = fieldDescricao.text
         var materia: String? = ""
         
+        var i = 0
+        var estudoExiste = false
+        
         if !lblCategorias.isHidden{
             materia = fieldCategoria.text
             let objMateria = Materia(nome: materia!)
@@ -56,13 +61,29 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
             
             print(vetorMaterias[0].nome)
         }
-
-        let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!, Materia: materia!)
-        
-        estudoDelegate?.salvar(estudo: estudo)
-    }
-    
-}
+        while(i < array.count){ //Não implementado
+                    if nome == array[i].nome{
+                        estudoExiste = true
+                    }
+                    i += 1
+                }
+                
+                if estudoExiste == false && nome != "" {
+                    let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!, Materia: materia!)
+                    estudoDelegate?.salvar(estudo: estudo)
+                }
+                    
+                else{
+                    if estudoExiste == true{
+                        Alerta.text = "Já existe um estudo com esse nome!"
+                    }
+                    if nome == ""{
+                        Alerta.text = "Digite o nome do estudo!"
+                    }
+                }
+            }
+            
+        }
 
 extension ViewController_AddEstudo2: UITextFieldDelegate{
     

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let domain = Bundle.main.bundleIdentifier!
 //        UserDefaults.standard.removePersistentDomain(forName: domain)
 //        UserDefaults.standard.synchronize()
-//
+
         if UserDefaults.standard.array(forKey: "Nome das Materias")?.count == nil {
            
             let nomes = [String]()

@@ -35,7 +35,7 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
         grafico.animate(xAxisDuration: 1.0)
         
         let xValuesFormatter = DateFormatter()
-            xValuesFormatter.dateFormat = "dd/MM/YY"
+            xValuesFormatter.dateFormat = "DD/MM/YY"
         let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: NSTimeIntervalSince1970, dateFormatter: xValuesFormatter)
             xValuesNumberFormatter.dateFormatter = xValuesFormatter // e.g. "wed 26"
         grafico.xAxis.valueFormatter = xValuesNumberFormatter
@@ -85,10 +85,12 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
     }
     
     func converterChartDataEntry(index: Int){
-        if vetorMaterias[index].vetorDatas.count != 0{
-            vetorDados.removeAll()
-            for i in 0...vetorMaterias[index].vetorDatas.count-1{
-                vetorDados.append(ChartDataEntry(x: vetorMaterias[index].vetorDatas[i], y: vetorMaterias[index].vetorNotas[i]))
+        if vetorMaterias.count > 0{
+            if vetorMaterias[index].vetorDatas.count != 0{
+                vetorDados.removeAll()
+                for i in 0...vetorMaterias[index].vetorDatas.count-1{
+                    vetorDados.append(ChartDataEntry(x: vetorMaterias[index].vetorDatas[i], y: vetorMaterias[index].vetorNotas[i]))
+                }
             }
         }
         
