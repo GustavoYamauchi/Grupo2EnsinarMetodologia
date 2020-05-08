@@ -26,7 +26,7 @@ extension ViewControllerHome: EstudoDelegate{
         
         //label1.text = "Confirmado"
         //label2.text = "Confirmado"
-        
+        rec_data()
         tableView.reloadData()
     }
 }
@@ -52,7 +52,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         rec_data()
         
-        //Buscar.addTarget(self, action: #selector(self.buscarEstudo), for: .editingChanged)
+        Buscar.addTarget(self, action: #selector(self.buscarEstudo), for: .editingChanged)
     }
     
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
@@ -78,16 +78,28 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        array.count
+        if listaBusca.count <= 0{
+            return array.count
+        }
+        else{
+            return listaBusca.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let newCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
         
+        if listaBusca.count <= 0 {
         newCell.label?.text = array[indexPath.row].nome
         newCell.btnExcluir.tag = indexPath.row
         newCell.btnExcluir?.addTarget(self, action: #selector(excluirEstudo), for: .touchUpInside)
+        }
+        else{
+            newCell.label?.text = listaBusca[indexPath.row].nome
+            newCell.btnExcluir.tag = indexPath.row
+            newCell.btnExcluir?.addTarget(self, action: #selector(excluirEstudo), for: .touchUpInside)
+        }
         
         newCell.index = indexPath.row
         
@@ -100,9 +112,13 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
     
     @objc func excluirEstudo(sender: UIButton){
         print(sender.tag)
-        
-        array[Int(sender.tag)].remove(i: i)
-        
+        if listaBusca.count <= 0{
+            array[Int(sender.tag)].remove(i: i)
+        }
+        else{
+            listaBusca[Int(sender.tag)].remove(i: i)
+            listaBusca.remove(at: sender.tag)
+        }
         rec_data()
         tableView.reloadData()
     }
@@ -131,11 +147,12 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
             print(listaBusca[j].nome)
             j += 1
         }
+        tableView.reloadData()
     }
 
     func rec_data(){
         array.removeAll()
-        var j = 1
+        
 
         let fileName = "Nomes dos Arquivos"
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -159,13 +176,13 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
          else{
             i = -1
         }
-
-         while (j <= i+1){
+        var j = i+1
+        while (1 <= j){
             let estudo: Estudo = Estudo(Nome: "", Descricao: "", Materia: "")
             estudo.restore(file: arrayOfRead[j])
             print(estudo.nome!)
             array.append(estudo)
-            j += 1
+            j -= 1
         }
     }
 }

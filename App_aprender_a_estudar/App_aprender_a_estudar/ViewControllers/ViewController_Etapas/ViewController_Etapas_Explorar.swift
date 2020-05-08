@@ -20,8 +20,6 @@ class ViewController_Etapas_Explorar: UIViewController {
     
     @IBOutlet weak var s_descobrir: UISwitch!
     
-    @IBOutlet weak var labelName: UILabel!
-    
     var estudoSelecionado: Estudo!
     
     var tela: Int?

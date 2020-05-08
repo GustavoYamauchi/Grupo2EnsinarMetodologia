@@ -11,9 +11,9 @@ import Charts
 
 class ChartXAxisFormatter: NSObject {
     var dateFormatter: DateFormatter?
-    var referenceTimeInterval: TimeInterval?
+    var referenceTimeInterval: Double?
 
-    convenience init(referenceTimeInterval: TimeInterval, dateFormatter: DateFormatter) {
+    convenience init(referenceTimeInterval: Double, dateFormatter: DateFormatter) {
         self.init()
         self.referenceTimeInterval = referenceTimeInterval
         self.dateFormatter = dateFormatter

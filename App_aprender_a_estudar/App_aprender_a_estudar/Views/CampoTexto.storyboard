@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Campo Texto-->
+        <!--Bloco de nota-->
         <scene sceneID="JQs-wl-J3B">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="UyD-K4-wxB" customClass="ViewController_CampoTexto" customModule="App_aprender_a_estudar" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="noQ-ju-5EC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Campo Texto" id="ZAy-MQ-whk">
+                    <navigationItem key="navigationItem" title="Bloco de nota" id="ZAy-MQ-whk">
                         <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.left" catalog="system" style="done" id="OpR-0b-Fy3">
                             <connections>
                                 <action selector="btnVoltar:" destination="UyD-K4-wxB" id="Nrc-Sl-FL1"/>

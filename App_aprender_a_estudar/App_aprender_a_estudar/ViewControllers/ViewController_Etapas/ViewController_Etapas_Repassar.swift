@@ -21,16 +21,9 @@ class ViewController_Etapas_Repassar: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueForCampoTexto"{
-            let navController: UINavigationController = segue.destination as! UINavigationController
         
-            if let campoTexto: ViewController_CampoTexto = navController.viewControllers.first as? ViewController_CampoTexto{
-                tela = sender as? Int
-                print(tela)
-                campoTexto.tela = tela
-                campoTexto.estudoSelecionado = estudoSelecionado
-                print("entrando no campo texto")
-            }
+        if let analise: ViewController_Etapas_Ana_lise = segue.destination as? ViewController_Etapas_Ana_lise{
+            analise.estudoSelecionado = estudoSelecionado
         }
         
         if let ajuda: ViewController_Ajuda = segue.destination as? ViewController_Ajuda {

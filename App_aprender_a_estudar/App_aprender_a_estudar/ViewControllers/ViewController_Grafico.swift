@@ -77,12 +77,12 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
 
        vetorNomes = UserDefaults.standard.object(forKey: "Nome das Materias") as! [String]
 
-       var i = 0
+       var p = 0
     
-       while(i < vetorNomes.count){
-           let materia = Materia(nome: vetorNomes[i]).restaurarMateria()
+       while(p < vetorNomes.count){
+           let materia = Materia(nome: vetorNomes[p]).restaurarMateria()
            vetorMaterias.append(materia)
-           i += 1
+           p += 1
        }
     }
     
@@ -90,9 +90,9 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
         if vetorMaterias.count > 0{
             if vetorMaterias[index].vetorDatas.count != 0{
                 vetorDados.removeAll()
-                for i in 0...vetorMaterias[index].vetorDatas.count-1{
-                    vetorDados.append(ChartDataEntry(x: vetorMaterias[index].vetorDatas[i], y: vetorMaterias[index].vetorNotas[i]))
-                    print(vetorMaterias[index].vetorDatas[i])
+                for p in 0...vetorMaterias[index].vetorDatas.count-1{
+                    vetorDados.append(ChartDataEntry(x: vetorMaterias[index].vetorDatas[p], y: vetorMaterias[index].vetorNotas[p]))
+                    print(vetorMaterias[index].vetorDatas[p])
                 }
             }
         }
@@ -127,6 +127,7 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
                         let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas[0], dateFormatter: xValuesFormatter)
                             xValuesNumberFormatter.dateFormatter = xValuesFormatter // e.g. "wed 26"
                         grafico.xAxis.valueFormatter = xValuesNumberFormatter
+                        
                     }
                         
                 }

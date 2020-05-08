@@ -61,7 +61,7 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
             
             print(vetorMaterias[0].nome)
         }
-        while(i < array.count){ //Não implementado
+        while(i < array.count){ //VERIFICA SE O ESTUDO JÁ EXISTE E SE ESTA ESCRITO UM NOME
                     if nome == array[i].nome{
                         estudoExiste = true
                     }

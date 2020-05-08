@@ -641,6 +641,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Tfa-7C-UsS" kind="show" identifier="segueForAnalise" id="zK2-hG-J6o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl7-hb-gPH">
                                 <rect key="frame" x="66.5" y="624.5" width="281" height="47"/>
@@ -726,6 +729,137 @@
             </objects>
             <point key="canvasLocation" x="2880" y="-190"/>
         </scene>
+        <!--Análise-->
+        <scene sceneID="aua-vi-jjU">
+            <objects>
+                <viewController storyboardIdentifier="Analise" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tfa-7C-UsS" customClass="ViewController_Etapas_Ana_lise" customModule="App_aprender_a_estudar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hGb-dK-8yP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="aIL-kc-sGv">
+                                <rect key="frame" x="66.5" y="156" width="281" height="584"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrc-xv-Yu0">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="281" id="3qs-jz-YvM"/>
+                                            <constraint firstAttribute="height" constant="47" id="MS0-Qa-WPM"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Anotações/Perguntas">
+                                                    <attributes>
+                                                        <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pergutas:" destination="Tfa-7C-UsS" eventType="touchUpInside" id="JRR-xQ-y8C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1YE-dS-W5M">
+                                        <rect key="frame" x="0.0" y="179" width="281" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="281" id="G1f-Ql-vtn"/>
+                                            <constraint firstAttribute="height" constant="47" id="YU7-C4-Vsj"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Respostas">
+                                                    <attributes>
+                                                        <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="respostas:" destination="Tfa-7C-UsS" eventType="touchUpInside" id="tQ6-aG-hTj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5e-oL-1eH">
+                                        <rect key="frame" x="0.0" y="358" width="281" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="281" id="5H0-lG-2Sm"/>
+                                            <constraint firstAttribute="height" constant="47" id="ncL-hn-edt"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Resumo">
+                                                    <attributes>
+                                                        <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resumo:" destination="Tfa-7C-UsS" eventType="touchUpInside" id="a6y-Sj-5ed"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-04-NfO">
+                                        <rect key="frame" x="0.0" y="537" width="281" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="jFs-5p-9E8"/>
+                                            <constraint firstAttribute="width" constant="281" id="wK6-tS-g3g"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Reflexão">
+                                                    <attributes>
+                                                        <font key="NSFont" size="27" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="reflexão:" destination="Tfa-7C-UsS" eventType="touchUpInside" id="bbO-zB-2qU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="584" id="2ms-Tv-2U2"/>
+                                    <constraint firstAttribute="width" constant="281" id="yZX-51-boj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aIL-kc-sGv" firstAttribute="centerX" secondItem="hGb-dK-8yP" secondAttribute="centerX" id="Vhq-E6-9i9"/>
+                            <constraint firstItem="aIL-kc-sGv" firstAttribute="centerY" secondItem="hGb-dK-8yP" secondAttribute="centerY" id="inv-Le-4RJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qcd-Jt-RaS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Análise" id="02a-1z-JCa"/>
+                    <connections>
+                        <segue destination="Xqf-St-LGy" kind="show" identifier="segueForCampoTexto" id="2Kw-KJ-PiR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl5-ur-fGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="-190"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="73k-qW-d3F">
             <objects>
@@ -744,8 +878,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="01F-rm-UgP"/>
-        <segue reference="oMG-1R-8At"/>
+        <segue reference="Rgv-rB-5GW"/>
+        <segue reference="2Kw-KJ-PiR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>

@@ -37,6 +37,7 @@ class ViewController_AddNota: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         materiaBuscar.addNota(data: data, nota: nota!)
         materiaBuscar.salvar()
+        print("Salvo")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
