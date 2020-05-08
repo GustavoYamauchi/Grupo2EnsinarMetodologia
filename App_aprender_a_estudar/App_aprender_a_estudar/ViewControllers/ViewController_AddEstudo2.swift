@@ -12,20 +12,28 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var nav: UINavigationItem!
     
+    @IBOutlet weak var lblCategorias: UITextField!
+    
     @IBOutlet weak var fieldTitulo: UITextView!
     
     @IBOutlet weak var fieldCategoria: UITextView!
     
     @IBOutlet weak var fieldDescricao: UITextView!
     
+    @IBOutlet weak var Alerta: UILabel!
     
+    @IBAction func btnGrafico(_ sender: UISwitch) {
+        lblCategorias.isHidden = !(lblCategorias.isHidden)
+        fieldCategoria.isHidden = !(fieldCategoria.isHidden)
+    }
    weak var estudoDelegate: EstudoDelegate?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure_textfields()
-        
+        lblCategorias.isHidden = true
+        fieldCategoria.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -39,13 +47,43 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
     @IBAction func Confirmar(_ sender: Any) {
         let nome: String? = fieldTitulo.text
         let descricao: String? = fieldDescricao.text
+        var materia: String? = ""
         
-        let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!)
+        var i = 0
+        var estudoExiste = false
         
-        estudoDelegate?.salvar(estudo: estudo)
-    }
-    
-}
+        if !lblCategorias.isHidden{
+            materia = fieldCategoria.text
+            let objMateria = Materia(nome: materia!)
+            vetorMaterias.append(objMateria)
+            objMateria.salvar()
+            objMateria.salvarNomeMaterias()
+            
+            print(vetorMaterias[0].nome)
+        }
+        while(i < array.count){ //Não implementado
+                    if nome == array[i].nome{
+                        estudoExiste = true
+                    }
+                    i += 1
+                }
+                
+                if estudoExiste == false && nome != "" {
+                    let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!, Materia: materia!)
+                    estudoDelegate?.salvar(estudo: estudo)
+                }
+                    
+                else{
+                    if estudoExiste == true{
+                        Alerta.text = "Já existe um estudo com esse nome!"
+                    }
+                    if nome == ""{
+                        Alerta.text = "Digite o nome do estudo!"
+                    }
+                }
+            }
+            
+        }
 
 extension ViewController_AddEstudo2: UITextFieldDelegate{
     

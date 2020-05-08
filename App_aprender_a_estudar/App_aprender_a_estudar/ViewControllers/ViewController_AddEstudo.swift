@@ -34,12 +34,12 @@ class ViewController_AddEstudo: UIViewController {
     @IBAction func Confirmar(_ sender: Any) {
         let nome: String? = Nome.text
         let descricao: String? = Descricao.text
-        let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!)
+        let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!, Materia: "")
         array.append(estudo)
         
         i += 1
         print(i)
-        print("\n" + array[0].Nome!)
+        print("\n" + array[0].nome!)
         
         array[i].save() //salva um arquivo com as infos do objeto
         array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo

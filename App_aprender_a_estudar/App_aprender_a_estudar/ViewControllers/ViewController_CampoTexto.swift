@@ -40,7 +40,13 @@ class ViewController_CampoTexto: UIViewController {
     
     @IBAction func btnVoltar(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        
+        salvarTextos()
+    }
+
+    @IBAction func btnSalvar(_ sender: Any) {
+        salvarTextos()
+    }
+    func salvarTextos(){
         switch tela {
             case 6:
                 estudoSelecionado.anotacoes_perguntas = Espaco_de_texto.text

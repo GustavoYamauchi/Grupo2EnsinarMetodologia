@@ -19,7 +19,7 @@ extension ViewControllerHome: EstudoDelegate{
         array.append(estudo)
         i += 1
         print(i)
-        print("\n" + array[0].Nome!)
+        print("\n" + array[0].nome!)
         
         array[i].save() //salva um arquivo com as infos do objeto
         array[i].save_filename(i: i) //salva o nome do arquivo do objeto em outro arquivo
@@ -35,16 +35,24 @@ var i: Int = -1
 
 var array = [Estudo]()
 
+var listaBusca = [Estudo]()
+
 class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var Buscar: UITextField!
+    
+    @IBOutlet weak var barraDeBusca: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         rec_data()
+        
+        //Buscar.addTarget(self, action: #selector(self.buscarEstudo), for: .editingChanged)
     }
     
     override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
@@ -77,7 +85,7 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
         
         let newCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
         
-        newCell.label?.text = array[indexPath.row].Nome
+        newCell.label?.text = array[indexPath.row].nome
         newCell.btnExcluir.tag = indexPath.row
         newCell.btnExcluir?.addTarget(self, action: #selector(excluirEstudo), for: .touchUpInside)
         
@@ -99,6 +107,32 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.reloadData()
     }
     
+    @objc func buscarEstudo(){  //Não implementado
+        listaBusca.removeAll()
+        let texto = Buscar.text
+        var estudoListado: String?
+        
+        print(texto)    //Debugger
+        
+        var i = 0 //indice para achar o estudo no array
+        
+        var j = 0   //Debugger
+        
+        while(i < array.count){ //Comparar com o vetor de estudo e adicionar para a lista caso encontre correspondecia com o textfield
+            estudoListado = array[i].nome?.lowercased() //Deixa tudo minusculo
+            if(estudoListado!.contains(texto!.lowercased())){   //Deixa tudo minusculo
+                listaBusca.append(array[i]) //Coloca para a lista de busca
+            }
+            i += 1
+        }
+        
+        print(listaBusca.count) //Debugger
+        while(j < listaBusca.count){    //Debugger
+            print(listaBusca[j].nome)
+            j += 1
+        }
+    }
+
     func rec_data(){
         array.removeAll()
         var j = 1
@@ -127,13 +161,12 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
         }
 
          while (j <= i+1){
-            let estudo: Estudo = Estudo(Nome: "", Descricao: "")
+            let estudo: Estudo = Estudo(Nome: "", Descricao: "", Materia: "")
             estudo.restore(file: arrayOfRead[j])
-             print(estudo.Nome!)
-             array.append(estudo)
+            print(estudo.nome!)
+            array.append(estudo)
             j += 1
         }
     }
-    
 }
 

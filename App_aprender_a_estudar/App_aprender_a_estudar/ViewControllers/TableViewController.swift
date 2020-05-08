@@ -32,7 +32,7 @@ class TableViewController: UITableViewController {
         
         let newCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
         
-        newCell.label?.text = array[indexPath.row].Nome
+        newCell.label?.text = array[indexPath.row].nome
         newCell.btnExcluir.tag = indexPath.row
         newCell.btnExcluir?.addTarget(self, action: #selector(excluirEstudo), for: .touchUpInside)
         
@@ -77,9 +77,9 @@ class TableViewController: UITableViewController {
         }
 
          while (j <= i+1){
-            let estudo: Estudo = Estudo(Nome: "", Descricao: "")
+            let estudo: Estudo = Estudo(Nome: "", Descricao: "", Materia: "")
             estudo.restore(file: arrayOfRead[j])
-            print(estudo.Nome!)
+            print(estudo.nome!)
              array.append(estudo)
             j += 1
         }
