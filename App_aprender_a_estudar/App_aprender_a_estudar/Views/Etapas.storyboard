@@ -665,7 +665,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="DJg-cy-cJu" kind="show" id="WPH-PK-7RV"/>
+                                    <segue destination="DJg-cy-cJu" kind="presentation" modalPresentationStyle="fullScreen" id="WPH-PK-7RV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-zO-wit">
@@ -744,8 +744,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="phh-yT-MAA"/>
-        <segue reference="pAS-28-aO2"/>
+        <segue reference="01F-rm-UgP"/>
+        <segue reference="oMG-1R-8At"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
