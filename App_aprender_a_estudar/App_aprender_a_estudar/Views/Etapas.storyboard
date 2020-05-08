@@ -644,11 +644,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl7-hb-gPH">
                                 <rect key="frame" x="66.5" y="624.5" width="281" height="47"/>
-                                <color key="backgroundColor" red="0.53860489593752792" green="0.84022157643125461" blue="0.61409322580738612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="281" id="8bH-OP-AC0"/>
                                     <constraint firstAttribute="height" constant="47" id="nhj-YQ-kiF"/>
                                 </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Finalizar">
@@ -743,8 +744,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PGN-R3-jeF"/>
-        <segue reference="cWU-hU-b6b"/>
+        <segue reference="phh-yT-MAA"/>
+        <segue reference="pAS-28-aO2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
