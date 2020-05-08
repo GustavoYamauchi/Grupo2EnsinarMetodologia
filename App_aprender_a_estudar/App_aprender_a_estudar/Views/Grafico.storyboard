@@ -97,9 +97,9 @@
                         <viewLayoutGuide key="safeArea" id="QxC-w0-ths"/>
                     </view>
                     <navigationItem key="navigationItem" id="lCN-aO-wMv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5U5-9t-kmf">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="5U5-9t-kmf">
                             <connections>
-                                <action selector="btnSalvarNota:" destination="Oi3-2I-JYW" id="HWO-HJ-n8l"/>
+                                <action selector="btnSalvar:" destination="LSg-4X-mdb" id="Oqf-6f-B4G"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,6 +110,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2P-79-4sW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LSg-4X-mdb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1700.0000000000002" y="46.875"/>
         </scene>

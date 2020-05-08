@@ -33,6 +33,11 @@
                                 <action selector="btnVoltar:" destination="UyD-K4-wxB" id="Nrc-Sl-FL1"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="0c0-Cb-rW3">
+                            <connections>
+                                <action selector="btnSalvar:" destination="UyD-K4-wxB" id="HbK-cz-ebs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Espaco_de_texto" destination="J3J-34-u9E" id="Adx-Bj-bna"/>

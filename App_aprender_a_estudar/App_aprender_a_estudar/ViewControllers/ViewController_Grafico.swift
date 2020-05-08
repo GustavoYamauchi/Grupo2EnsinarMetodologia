@@ -22,14 +22,16 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
     
     @IBOutlet weak var pickerMaterias: UIPickerView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         grafico.delegate = self
-        grafico.doubleTapToZoomEnabled = false
         pickerMaterias.delegate = self
         pickerMaterias.dataSource = self
-        grafico.pinchZoomEnabled = true
+        
+        grafico.doubleTapToZoomEnabled = false
         grafico.rightAxis.enabled = false
+        
         grafico.xAxis.labelPosition = .bottom
         grafico.animate(xAxisDuration: 2.0)
         
