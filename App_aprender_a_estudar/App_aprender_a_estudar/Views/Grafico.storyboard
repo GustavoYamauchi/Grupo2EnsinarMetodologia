@@ -149,12 +149,13 @@
             </objects>
             <point key="canvasLocation" x="1700.0000000000002" y="46.875"/>
         </scene>
-        <!--Gráfico-->
+        <!--Progresso-->
         <scene sceneID="dzt-fF-1md">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fVL-VX-D4y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gráfico" id="arQ-az-pvx"/>
+                    <tabBarItem key="tabBarItem" title="Progresso" image="chart.bar" catalog="system" id="iig-Mm-kZD"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vL3-nz-G3D">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -169,4 +170,7 @@
             <point key="canvasLocation" x="-52.173913043478265" y="40.848214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart.bar" catalog="system" width="128" height="90"/>
+    </resources>
 </document>

@@ -15,21 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem-Vindo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejJ-Jv-8dd">
-                                <rect key="frame" x="124.5" y="454" width="165.5" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="jFa-Zb-lUu">
-                                <rect key="frame" x="38" y="173" width="338" height="255"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="211" id="rbU-Pl-ugq"/>
-                                    <constraint firstAttribute="width" constant="279" id="sum-tW-9oX"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJB-UD-Otd">
-                                <rect key="frame" x="156" y="650" width="102" height="52"/>
+                                <rect key="frame" x="156" y="681" width="102" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="wLj-xv-xHG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="33"/>
                                 <state key="normal" title="Vamos!"/>
                                 <connections>
@@ -37,15 +27,32 @@
                                     <segue destination="152-25-Z1t" kind="show" id="xyp-ef-zbi"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cel2" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-qD-2c8">
+                                <rect key="frame" x="53" y="89" width="308" height="380"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="U2a-FS-3rq">
+                                <rect key="frame" x="44" y="477" width="326" height="196"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="xV0-p3-6oh"/>
+                                </constraints>
+                                <string key="text">Bem vindo ao Aprenda com Robinson! Aqui voce irá aprender como estudar com a metodologia de estudo robinson - EPL2R aplicando-a em qualquer conteúdo desejado. Foi criada pelo psicólogo educacional Francis Pleasante Robinson, a fim de promover um maior aproveitamento acadêmico entre estudantes. São 5 etapas com dinãmicas de aprendizado passivo e ativo. </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jFa-Zb-lUu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-130.5" id="W6q-JS-JuU"/>
-                            <constraint firstItem="jFa-Zb-lUu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xby-8S-nj6"/>
-                            <constraint firstItem="ejJ-Jv-8dd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YIr-qP-euk"/>
-                            <constraint firstItem="EJB-UD-Otd" firstAttribute="centerX" secondItem="ejJ-Jv-8dd" secondAttribute="centerX" id="amJ-fV-whm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EJB-UD-Otd" secondAttribute="bottom" constant="160" id="sPo-pS-zGO"/>
-                            <constraint firstItem="ejJ-Jv-8dd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="26.5" id="yte-ow-YM9"/>
+                            <constraint firstItem="3Pg-qD-2c8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="0yN-SR-KIT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EJB-UD-Otd" secondAttribute="bottom" constant="129" id="Gnp-ee-grg"/>
+                            <constraint firstItem="U2a-FS-3rq" firstAttribute="top" secondItem="3Pg-qD-2c8" secondAttribute="bottom" constant="8" id="LsG-59-aWf"/>
+                            <constraint firstItem="U2a-FS-3rq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="RFZ-L7-XfI"/>
+                            <constraint firstItem="3Pg-qD-2c8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="Rek-yc-dnE"/>
+                            <constraint firstItem="3Pg-qD-2c8" firstAttribute="centerX" secondItem="U2a-FS-3rq" secondAttribute="centerX" id="Wzk-ri-zwf"/>
+                            <constraint firstItem="EJB-UD-Otd" firstAttribute="top" secondItem="U2a-FS-3rq" secondAttribute="bottom" constant="8" id="bhs-B3-CyI"/>
+                            <constraint firstItem="3Pg-qD-2c8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cA0-BS-gf2"/>
+                            <constraint firstItem="U2a-FS-3rq" firstAttribute="centerX" secondItem="EJB-UD-Otd" secondAttribute="centerX" id="cOR-yy-37E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -53,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+            <point key="canvasLocation" x="916" y="115"/>
         </scene>
         <!--Menu-->
         <scene sceneID="kiO-jV-94G">
@@ -63,7 +70,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SuB-Sq-Pba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617.3913043478262" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1626" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tqN-CT-Vrj">
@@ -76,7 +83,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vnW-V4-zmt"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f4U-5S-bDc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Re-OG-eq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -91,10 +98,10 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aas-SI-QNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="150"/>
+            <point key="canvasLocation" x="1623" y="163"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="175.5" height="125"/>
+        <image name="cel2" width="188.5" height="192.5"/>
     </resources>
 </document>

@@ -49,7 +49,7 @@
         <scene sceneID="wTa-by-Qai">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="lWy-qW-hai" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="Fmt-dO-U1r"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Fmt-dO-U1r"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C7e-sX-apk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -77,30 +77,30 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="left" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" focusStyle="custom" rowHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="1tO-2A-LO0" customClass="CustomCell" customModule="App_aprender_a_estudar" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="left" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" focusStyle="custom" rowHeight="68" translatesAutoresizingMaskIntoConstraints="NO" id="1tO-2A-LO0" customClass="CustomCell" customModule="App_aprender_a_estudar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1tO-2A-LO0" id="PaW-5X-rT8">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-bI-hTs">
-                                                    <rect key="frame" x="87" y="11.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9m-Sk-dcc">
+                                                    <rect key="frame" x="315" y="19" width="45" height="30"/>
+                                                    <state key="normal" title="excluir"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-bI-hTs">
+                                                    <rect key="frame" x="20" y="17" width="73" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9m-Sk-dcc">
-                                                    <rect key="frame" x="246" y="6" width="45" height="30"/>
-                                                    <state key="normal" title="excluir"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="x9m-Sk-dcc" firstAttribute="centerX" secondItem="PaW-5X-rT8" secondAttribute="centerX" constant="81.5" id="NVr-dr-Cwv"/>
-                                                <constraint firstItem="x9m-Sk-dcc" firstAttribute="centerY" secondItem="PaW-5X-rT8" secondAttribute="centerY" constant="-1" id="P6M-8c-moT"/>
-                                                <constraint firstItem="OU4-bI-hTs" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="PaW-5X-rT8" secondAttribute="centerX" constant="50" id="X62-RL-6C6"/>
-                                                <constraint firstItem="OU4-bI-hTs" firstAttribute="leading" secondItem="PaW-5X-rT8" secondAttribute="centerX" constant="-100" id="jkx-hX-ywc"/>
-                                                <constraint firstItem="OU4-bI-hTs" firstAttribute="centerY" secondItem="PaW-5X-rT8" secondAttribute="centerY" id="tpL-af-6ge"/>
+                                                <constraint firstItem="x9m-Sk-dcc" firstAttribute="leading" secondItem="PaW-5X-rT8" secondAttribute="leading" constant="315" id="6l1-Ob-4qJ"/>
+                                                <constraint firstItem="OU4-bI-hTs" firstAttribute="leading" secondItem="PaW-5X-rT8" secondAttribute="leadingMargin" id="Oxm-1s-8az"/>
+                                                <constraint firstAttribute="trailing" secondItem="x9m-Sk-dcc" secondAttribute="trailing" constant="14" id="RPr-F3-t39"/>
+                                                <constraint firstItem="x9m-Sk-dcc" firstAttribute="centerY" secondItem="PaW-5X-rT8" secondAttribute="centerY" id="Wqh-rt-89W"/>
+                                                <constraint firstItem="OU4-bI-hTs" firstAttribute="top" secondItem="PaW-5X-rT8" secondAttribute="topMargin" constant="-1" id="xNB-wQ-kpv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="KvU-xg-9sH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="KvU-xg-9sH">
                                 <rect key="frame" x="20" y="172" width="374" height="236"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="236" id="kKc-wW-kMt"/>
@@ -304,6 +304,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="204.5" height="149"/>
+        <image name="Image-2" width="238" height="150"/>
+        <image name="house" catalog="system" width="128" height="110"/>
     </resources>
 </document>
