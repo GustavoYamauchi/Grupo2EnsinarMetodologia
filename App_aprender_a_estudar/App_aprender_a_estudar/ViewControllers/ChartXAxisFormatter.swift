@@ -30,7 +30,7 @@ extension ChartXAxisFormatter: IAxisValueFormatter {
             return ""
         }
 
-        let date = Date(timeIntervalSince1970: value * 3600 * 24 + referenceTimeInterval)
+        let date = Date(timeIntervalSince1970: referenceTimeInterval)
         return dateFormatter.string(from: date)
     }
 }

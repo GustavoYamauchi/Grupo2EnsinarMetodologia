@@ -25,11 +25,11 @@ class ViewController_AddNota: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         
         let nota = Double(txtNota.text!)
+        let dataString = DateFormatter();
         
         let data = (pickerDataNota.date).timeIntervalSince1970
         
-        
-        
+        //print(dataString.date(from: data))
         //testeDeVariaveis = (materia, nota, data)
         
         let materiaBuscar : Materia = Buscar(materiaNome: materia)

@@ -28,22 +28,19 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
         grafico.doubleTapToZoomEnabled = false
         pickerMaterias.delegate = self
         pickerMaterias.dataSource = self
-        
+        grafico.pinchZoomEnabled = true
         grafico.rightAxis.enabled = false
         grafico.xAxis.labelPosition = .bottom
+        grafico.animate(xAxisDuration: 2.0)
         
-        grafico.animate(xAxisDuration: 1.0)
-        
-        let xValuesFormatter = DateFormatter()
-            xValuesFormatter.dateFormat = "DD/MM/YY"
-        let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: NSTimeIntervalSince1970, dateFormatter: xValuesFormatter)
-            xValuesNumberFormatter.dateFormatter = xValuesFormatter // e.g. "wed 26"
-        grafico.xAxis.valueFormatter = xValuesNumberFormatter
-
         rec_dados_materias()
+        //grafico.xAxis.setLabelCount(6, force: false)
+        
+        carregarGrafico()
+
         converterChartDataEntry(index: pickerMaterias.selectedRow(inComponent: 0))
         let set = LineChartDataSet(entries: vetorDados)
-        set.colors = ChartColorTemplates.joyful()
+        set.colors = ChartColorTemplates.material()
         
         let data = LineChartData(dataSet: set)
         
@@ -54,6 +51,9 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
     override func viewWillAppear(_ animated: Bool) {
         pickerMaterias.reloadAllComponents()
         rec_dados_materias()
+        
+        carregarGrafico()
+        
         let set = LineChartDataSet(entries: vetorDados)
         set.colors = ChartColorTemplates.joyful()
         
@@ -90,6 +90,7 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
                 vetorDados.removeAll()
                 for i in 0...vetorMaterias[index].vetorDatas.count-1{
                     vetorDados.append(ChartDataEntry(x: vetorMaterias[index].vetorDatas[i], y: vetorMaterias[index].vetorNotas[i]))
+                    print(vetorMaterias[index].vetorDatas[i])
                 }
             }
         }
@@ -111,5 +112,23 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         converterChartDataEntry(index: row)
+    }
+    
+    func carregarGrafico(){
+        if(vetorMaterias.count != 0){
+            if(vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorNotas.count > 0){
+                let xValuesFormatter = DateFormatter()
+                xValuesFormatter.dateFormat = "dd \nMM"
+                if(vetorMaterias.count != 0){
+                    if(vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorNotas.count > 0){
+                        print(Date(timeIntervalSince1970: vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas[0]))
+                        let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas[0], dateFormatter: xValuesFormatter)
+                            xValuesNumberFormatter.dateFormatter = xValuesFormatter // e.g. "wed 26"
+                        grafico.xAxis.valueFormatter = xValuesNumberFormatter
+                    }
+                        
+                }
+            }
+        }
     }
 }
