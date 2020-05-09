@@ -283,7 +283,7 @@
                         <viewLayoutGuide key="safeArea" id="BAM-g2-KNT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Novo Estudo" id="oJs-p5-b55">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JLq-lk-dUh">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="JLq-lk-dUh">
                             <connections>
                                 <action selector="Confirmar:" destination="yso-7z-otG" id="V8c-Je-JZh"/>
                             </connections>
