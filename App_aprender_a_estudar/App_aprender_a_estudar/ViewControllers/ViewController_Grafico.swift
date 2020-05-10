@@ -90,8 +90,13 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
         if vetorMaterias.count > 0{
             if vetorMaterias[index].vetorDatas.count != 0{
                 vetorDados.removeAll()
+                var referenceTimeInterval: TimeInterval = 0
+                if let minTimeInterval = (vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas.map { $0 }).min() {
+                        referenceTimeInterval = minTimeInterval
+                    }
                 for p in 0...vetorMaterias[index].vetorDatas.count-1{
-                    vetorDados.append(ChartDataEntry(x: vetorMaterias[index].vetorDatas[p], y: vetorMaterias[index].vetorNotas[p]))
+                    vetorDados.append(ChartDataEntry(x: (vetorMaterias[index].vetorDatas[p] - referenceTimeInterval) / (3600 * 24), y: vetorMaterias[index].vetorNotas[p]))
+                    
                     print(vetorMaterias[index].vetorDatas[p])
                 }
             }
@@ -120,14 +125,28 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
         if(vetorMaterias.count != 0){
             if(vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorNotas.count > 0){
                 let xValuesFormatter = DateFormatter()
-                xValuesFormatter.dateFormat = "dd \nMM"
+                xValuesFormatter.dateFormat = "MMM"
                 if(vetorMaterias.count != 0){
                     if(vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorNotas.count > 0){
                         print(Date(timeIntervalSince1970: vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas[0]))
-                        let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas[0], dateFormatter: xValuesFormatter)
-                            xValuesNumberFormatter.dateFormatter = xValuesFormatter // e.g. "wed 26"
-                        grafico.xAxis.valueFormatter = xValuesNumberFormatter
                         
+                        var referenceTimeInterval: TimeInterval = 0
+                                if let minTimeInterval = (vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas.map { $0 }).min() {
+                                        referenceTimeInterval = minTimeInterval
+                                    }
+                        
+                        
+                                    // Define chart xValues formatter
+                                    let formatter = DateFormatter()
+                        
+                                    formatter.dateStyle = .short
+                                    formatter.timeStyle = .none
+                                    formatter.locale = Locale.current
+                                    formatter.dateFormat = "MMM"
+                        
+                                    let xValuesNumberFormatter = ChartXAxisFormatter(referenceTimeInterval: referenceTimeInterval, dateFormatter: formatter)
+                    
+                                        grafico.xAxis.valueFormatter = xValuesNumberFormatter
                     }
                         
                 }
