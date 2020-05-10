@@ -124,8 +124,6 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
     func carregarGrafico(){
         if(vetorMaterias.count != 0){
             if(vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorNotas.count > 0){
-                let xValuesFormatter = DateFormatter()
-                xValuesFormatter.dateFormat = "MMM"
                 if(vetorMaterias.count != 0){
                     if(vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorNotas.count > 0){
                         print(Date(timeIntervalSince1970: vetorMaterias[pickerMaterias.selectedRow(inComponent: 0)].vetorDatas[0]))
