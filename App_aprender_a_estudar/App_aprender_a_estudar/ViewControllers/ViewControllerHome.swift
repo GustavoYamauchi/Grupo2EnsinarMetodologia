@@ -123,16 +123,12 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.reloadData()
     }
     
-    @objc func buscarEstudo(){  //Não implementado
+    @objc func buscarEstudo(){
         listaBusca.removeAll()
         let texto = Buscar.text
         var estudoListado: String?
         
-        print(texto)    //Debugger
-        
         var i = 0 //indice para achar o estudo no array
-        
-        var j = 0   //Debugger
         
         while(i < array.count){ //Comparar com o vetor de estudo e adicionar para a lista caso encontre correspondecia com o textfield
             estudoListado = array[i].nome?.lowercased() //Deixa tudo minusculo
@@ -142,11 +138,6 @@ class ViewControllerHome: UIViewController, UITableViewDataSource, UITableViewDe
             i += 1
         }
         
-        print(listaBusca.count) //Debugger
-        while(j < listaBusca.count){    //Debugger
-            print(listaBusca[j].nome)
-            j += 1
-        }
         tableView.reloadData()
     }
 

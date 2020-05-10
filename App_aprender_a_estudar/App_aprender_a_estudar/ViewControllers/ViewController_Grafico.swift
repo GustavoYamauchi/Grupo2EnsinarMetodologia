@@ -41,7 +41,7 @@ class ViewController_Grafico: UIViewController, ChartViewDelegate, UIPickerViewD
         carregarGrafico()
 
         converterChartDataEntry(index: pickerMaterias.selectedRow(inComponent: 0))
-        let set = LineChartDataSet(entries: vetorDados)
+        let set = LineChartDataSet(entries: vetorDados, label: "Evolução")
         set.colors = ChartColorTemplates.material()
         
         let data = LineChartData(dataSet: set)

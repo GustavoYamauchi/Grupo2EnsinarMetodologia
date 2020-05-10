@@ -11,18 +11,20 @@
         <scene sceneID="kAn-W6-BBb">
             <objects>
                 <viewController id="lfB-d7-9yD" customClass="ViewController_Grafico" customModule="App_aprender_a_estudar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oca-fc-5Gk">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="oca-fc-5Gk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-o1-lqI">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-o1-lqI">
                                 <rect key="frame" x="36" y="498" width="343" height="178"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="178" id="R3d-S5-j0R"/>
+                                    <constraint firstAttribute="width" constant="343" id="ava-3o-l7M"/>
                                     <constraint firstAttribute="height" constant="178" id="vwX-L5-jJh"/>
                                 </constraints>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-S2-IBI" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="37" y="181" width="340" height="309"/>
+                                <rect key="frame" x="37" y="181" width="341" height="309"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -39,7 +41,6 @@
                         <viewLayoutGuide key="safeArea" id="GXA-d9-YqF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Progresso" id="zET-I6-Gdg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="3Ki-Pw-nk4"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8jn-8D-gKG">
                             <connections>
                                 <segue destination="Oi3-2I-JYW" kind="show" id="DZg-xc-VQ8"/>
@@ -65,21 +66,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Matéria:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6W-Yw-Riy">
-                                <rect key="frame" x="31" y="140" width="177" height="60"/>
+                                <rect key="frame" x="31" y="140" width="175" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Fsm-Jh-tws"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDg-9I-tiY">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDg-9I-tiY">
                                 <rect key="frame" x="41" y="172" width="333" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="333" id="06f-g1-uYx"/>
+                                    <constraint firstAttribute="height" constant="159" id="UHw-tp-bhH"/>
+                                </constraints>
                             </pickerView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="j40-Je-Ybe">
-                                <rect key="frame" x="0.0" y="505" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="505" width="415" height="216"/>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Data:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-es-JEL">
-                                <rect key="frame" x="31" y="450" width="239" height="60"/>
+                                <rect key="frame" x="31" y="450" width="237" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="l6Z-Rq-ckq"/>
                                 </constraints>
@@ -87,12 +92,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nota:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXg-t1-Crz">
-                                <rect key="frame" x="31" y="363" width="177" height="60"/>
+                                <rect key="frame" x="31" y="363" width="175" height="60"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor da avalição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lY8-qS-0Jl">
-                                <rect key="frame" x="108" y="376" width="139" height="34"/>
+                                <rect key="frame" x="108" y="376" width="137" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="3yP-SU-pEu"/>
                                 </constraints>
@@ -157,7 +162,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vL3-nz-G3D">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
