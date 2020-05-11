@@ -19,9 +19,5 @@ class ViewController: UIViewController {
     
     @IBAction func vamos(_ sender: Any) {
        }
-    
-    
-    
-
 }
 

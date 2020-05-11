@@ -12,7 +12,7 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var nav: UINavigationItem!
     
-    @IBOutlet weak var lblCategorias: UITextField!
+    @IBOutlet weak var lblCategorias: UILabel!
     
     @IBOutlet weak var fieldTitulo: UITextView!
     
@@ -70,9 +70,12 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
                 if estudoExiste == false && nome != "" {
                     let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!, Materia: materia!)
                     estudoDelegate?.salvar(estudo: estudo)
+                    Alerta.textColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+                    Alerta.text = "Salvo!"
                 }
                     
                 else{
+                    Alerta.textColor = .red
                     if estudoExiste == true{
                         Alerta.text = "Já existe um estudo com esse nome!"
                     }
@@ -81,7 +84,6 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
                     }
                 }
             }
-            
         }
 
 extension ViewController_AddEstudo2: UITextFieldDelegate{
