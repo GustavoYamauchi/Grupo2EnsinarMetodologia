@@ -70,8 +70,9 @@ class ViewController_AddEstudo2: UIViewController, UITextViewDelegate {
                 if estudoExiste == false && nome != "" {
                     let estudo: Estudo = Estudo(Nome: nome!, Descricao: descricao!, Materia: materia!)
                     estudoDelegate?.salvar(estudo: estudo)
-                    Alerta.textColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
-                    Alerta.text = "Salvo!"
+//                    Alerta.textColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+//                    Alerta.text = "Salvo!"
+                    self.navigationController?.popViewController(animated: true)
                 }
                     
                 else{
